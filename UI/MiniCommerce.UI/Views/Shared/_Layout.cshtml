@@ -30,33 +30,46 @@
         </div>
     }
     @await Html.PartialAsync("_navbar")
-    <partial name="_header">
-        <main>
-            <div class="container">
-                @if (IsSectionDefined("Categories"))
-                {
-                    <div class="row">
-                        <div class="col-md-3">
-                            @RenderSection("Categories",false)
-                        </div>
-
-                        <div class="col-md-9">
-                            @RenderBody()
-                        </div>
-                    </div>
-                }
-                else
-                {
-                    <div class="row">
-                        <div class="col-md-12">
-                            @RenderBody()
-                        </div>
-                    </div>
-                }
+    @if (IsSectionDefined("Header"))
+    {
+        <header>
+            <div style="padding-bottom:50px;">
+                @RenderSection("Header",false)
             </div>
-        </main>
+        </header>
 
-        @RenderSection("Scripts",false)
-        @*<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>*@
+    }
+    else
+    {
+        @await Html.PartialAsync("_header")
+    }
+    @*<partial name="_header">*@
+    <main>
+        <div class="container">
+            @if (IsSectionDefined("Categories"))
+            {
+                <div class="row">
+                    <div class="col-md-3">
+                        @RenderSection("Categories",false)
+                    </div>
+
+                    <div class="col-md-9">
+                        @RenderBody()
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            }
+        </div>
+    </main>
+
+    @RenderSection("Scripts",false)
+    @*<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>*@
 </body>
 </html>

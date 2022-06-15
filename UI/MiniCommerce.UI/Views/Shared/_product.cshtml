@@ -4,25 +4,42 @@
     <img class="card-img-top" src="~/images/@Model.ImageUrl" alt="" />
     <div class="card-body">
         <h5 class="card-title">@Model.Name</h5>
-        <p class="card-text">@Model.Usage</p>
-        <p class="card-text">@Model.Color</p>
-        <p class="card-text">@Model.Brand</p>
-        <p class="card-text">@Model.IsSold.ToString()</p>
+        <p class="card-title">@Model.Description</p>
+        @*<p class="card-text">@Model.IsSold.ToString()</p>*@
 
-        <a class="btn btn-primary" asp-action="Details" asp-controller="Product" asp-route-id=@Model.Id>İncele</a>
-        @if (@Model.IsSold is false)
-        {
-            <a class="btn btn-primary" asp-action="BuyProduct" asp-controller="Product" asp-route-id="@Model.Id">Satın Al</a>
-
-            if (@Model.IsOfferable is true)
+        @* <p>
+            @if (userManager.GetUserId(User).Equals(@Model.Id.ToString()))
             {
-                <a class="btn btn-primary" asp-action="Make" asp-controller="Offers" asp-route-id="@Model.Id">Teklif Ver</a>
-                @*<a href="~/Offers/Make/@Model.Id" class="btn btn-primary">Teklif Ver</a>*@
+            <p> ....</p>
             }
-        }
-        else
-        {
-            <p class="alert-warning">Bu Ürün satışta değil</p>
-        }
+
+            </p>*@
     </div>
+    <div class="col-lg-12 card-footer" style="text-align:center; margin-bottom:20px;  max-height:120px;">
+
+
+        <a class="btn btn-sm btn-danger" style="margin-bottom:10px;text-align:center;" asp-action="Details" asp-controller="Product" asp-route-id=@Model.Id>İncele</a>
+
+
+        <div class="btn-toolbar mb-3" role="toolbar">
+            <div class="btn-group mr">
+                @if (@Model.IsSold is false)
+                {
+                    <a class="btn btn-sm btn-success mr-2" style="margin-bottom:10px" asp-action="BuyProduct" asp-controller="Product" asp-route-id="@Model.Id">Satın Al</a>
+
+                    if (@Model.IsOfferable is true)
+                    {
+                        <a class="btn btn-sm btn-outline-primary" style="margin-bottom:10px" asp-action="Make" asp-controller="Offers" asp-route-id="@Model.Id">Teklif Ver</a>
+                    }
+                }
+                else
+                {
+                    <p class="alert-warning">Product is not on sale </p>
+                }
+            </div>
+        </div>
+    </div>
+
+
+
 </div>

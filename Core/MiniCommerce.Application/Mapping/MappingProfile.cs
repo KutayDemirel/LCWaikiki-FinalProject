@@ -4,6 +4,7 @@ using MiniCommerce.Application.Features.Commands.Offers.Adds;
 using MiniCommerce.Application.Features.Commands.Offers.Updates.ApproveOffer;
 using MiniCommerce.Application.Features.Commands.Products.Adds;
 using MiniCommerce.Application.Features.Commands.Products.Updates.BuyProduct;
+using MiniCommerce.Application.Features.Commands.Products.Updates.SetProductOffer;
 using MiniCommerce.Application.Features.Queries.Brands.GetBrands;
 using MiniCommerce.Application.Features.Queries.Categories.GetAllCategories;
 using MiniCommerce.Application.Features.Queries.Colors.GetColors;
@@ -34,6 +35,7 @@ namespace MiniCommerce.Application.Mapping
 
             CreateMap<AddProductCommand, Product>().ReverseMap();
             CreateMap<BuyProductCommand, Product>().ReverseMap();
+            CreateMap<SetProductOfferCommand, Product>().ReverseMap();
             CreateMap<Product, GetAllProductsQueryResponse>();
             CreateMap<Product, GetProductsByCategoryIdQueryResponse>();
             CreateMap<Product, GetProductByIdQueryResponse>()

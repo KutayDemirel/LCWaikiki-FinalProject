@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<GetOffersModel>
 
+
+@section Header{}
 @section Categories{
 
 <div class="list-group">
@@ -13,13 +15,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ProductId);
+                @Html.DisplayNameFor(model => model.ProductId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price);
+                @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
-
+                Status
             </th>
         </tr>
     </thead>
@@ -39,7 +41,7 @@
                             @if (item.IsApproved is true)
                             {
 
-                                <a class="btn btn-primary" asp-action="BuyProduct" asp-controller="Product" asp-route-id="@item.ProductId">Buy Product</a>
+                                <a class="btn btn-primary" asp-action="OfferBuyProduct" asp-controller="Product" asp-route-id="@item.ProductId" asp-route-price="@item.Price">Buy Product</a>
                                 @*@using (Html.BeginForm("BuyProduct", "Product", FormMethod.Post))
                                 {
                                     <input type="submit" value="Buy Product" asp-controller="Product" asp-action="BuyProduct" asp-route-id="@item.ProductId" class="delete btn btn-sm btn-success">

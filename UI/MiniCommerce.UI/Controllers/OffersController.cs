@@ -86,20 +86,21 @@ namespace MiniCommerce.UI.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Approve(ApproveOfferModel approveOfferModel)
+        public async Task<IActionResult> Approve(ApproveOfferViewModel approveOfferViewModel)
         {
-            if (approveOfferModel == null)
+            if (approveOfferViewModel == null)
                 return RedirectToAction("Index").ShowMessage(Status.Error, "Uyarı", "Güncellenmek istenen blok bulunamadı!");
 
             if (!ModelState.IsValid)
             {
-                //var product = await _productService.GetByIdAsync(approveOfferModel.Id);
-                //approveOfferModel.Product = product.Data;
+                //var product = await _productService.GetByIdAsync(approveOfferViewModel.Product.Id);
+                //approveOfferViewModel.Product = product.Data;
                 //OfferList(product.Data);
-                return View(approveOfferModel).ShowMessage(Status.Error, "Error", "Eksik veya hatalı bilgiler mevcut!");
+                return View(approveOfferViewModel).ShowMessage(Status.Error, "Error", "Eksik veya hatalı bilgiler mevcut!");
             }
 
-            var result = await _offerService.ApproveAsync(approveOfferModel);
+            //var set = await _productService.SetPriceAsync(approveOfferViewModel.Product);
+            var result = await _offerService.ApproveAsync(approveOfferViewModel.Offer);
 
             if (result.ResultType == ResultTypeEnum.Success)
             {

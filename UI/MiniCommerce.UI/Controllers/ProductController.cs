@@ -131,6 +131,53 @@ namespace MiniCommerce.UI.Controllers
             }
         }
 
+
+
+        #region offerbuy
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> OfferBuyProduct(int? id,string price)
+        {
+
+            if (id == null)
+                return RedirectToAction().ShowMessage(Status.Error, "Uyarı", "Talep hatalı lütfen menüleri kullanarak yeniden deneyiniz!");
+
+            var product = await _productService.GetByIdAsync(id.Value);
+            product.Data.Price =Convert.ToDecimal(price);
+            var set = await _productService.SetPriceAsync(product.Data);
+            //_mapper.Map<ProductModel>(product.Data))
+            return View(product.Data);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> OfferBuyProduct(ProductModel offerBuyProductModel)
+        {
+            if (offerBuyProductModel == null)
+                return RedirectToAction("Index").ShowMessage(Status.Error, "Uyarı", "Güncellenmek istenen blok bulunamadı!");
+
+            if (!ModelState.IsValid)
+            {
+                return View(offerBuyProductModel).ShowMessage(Status.Error, "Error", "Eksik veya hatalı bilgiler mevcut!");
+            }
+
+            var result = await _productService.BuyAsync(offerBuyProductModel);
+
+            if (result.ResultType == ResultTypeEnum.Success)
+            {
+                return RedirectToAction("Index").ShowMessage(Status.Ok, "Başarılı", result.Message);
+            }
+            else
+            {
+                return RedirectToAction("Index").ShowMessage(Status.Error, "Hata", "Beklenmedik bir hata oluştu!");
+            }
+        }
+
+
+        #endregion
+
         #region ADD
 
         [HttpGet]

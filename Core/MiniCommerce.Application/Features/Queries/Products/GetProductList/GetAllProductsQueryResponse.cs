@@ -14,10 +14,10 @@ namespace MiniCommerce.Application.Features.Queries.Products.GetProductList
         public int Stock { get; set; }
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
-        //public string Color { get; set; }
-        //public string Category { get; set; }
-        //public string Brand { get; set; }
-        //public string Usage { get; set; }
+        public string Color { get; set; }
+        public string Category { get; set; }
+        public string Brand { get; set; }
+        public string Usage { get; set; }
         public string ImageUrl { get; set; }
         public bool IsSold { get; set; }
         public bool IsOfferable { get; set; }

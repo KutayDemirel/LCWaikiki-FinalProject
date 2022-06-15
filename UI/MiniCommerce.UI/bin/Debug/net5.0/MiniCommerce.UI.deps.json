@@ -35,6 +35,7 @@
         "dependencies": {
           "FluentValidation.AspNetCore": "11.0.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.Extensions.Identity.Core": "5.0.17",
           "Microsoft.Extensions.Identity.Stores": "5.0.17",
           "Microsoft.TypeScript.MSBuild": "4.7.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",

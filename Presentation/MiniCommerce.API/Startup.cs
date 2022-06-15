@@ -42,6 +42,7 @@ namespace MiniCommerce.API
             services.Configure<JwtSettings>(Configuration.GetSection("JWT"));
             var jwt = Configuration.GetSection("JWT").Get<JwtSettings>();
 
+
             services.AddIdentity<User, Role>(options =>
             {
                 options.Password.RequiredLength = 8;
@@ -114,6 +115,11 @@ namespace MiniCommerce.API
                     };
                 });
             #endregion
+
+
+
+
+
             services.AddControllers(options =>
                 options.Filters.Add(new ApiExceptionFilterAttribute()));
             

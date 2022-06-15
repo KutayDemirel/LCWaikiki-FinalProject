@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MiniCommerce.Application.Features.Commands.Products.Adds;
 using MiniCommerce.Application.Features.Commands.Products.Updates.BuyProduct;
+using MiniCommerce.Application.Features.Commands.Products.Updates.SetProductOffer;
 using MiniCommerce.Application.Features.Queries.Products.GetProductById;
 using MiniCommerce.Application.Features.Queries.Products.GetProductList;
 using MiniCommerce.Application.Features.Queries.Products.GetProductsByCategoryId;
@@ -110,6 +111,17 @@ namespace MiniCommerce.API.Controllers
         }
 
         [Authorize]
+        [HttpPut("Price")]
+        public async Task<IActionResult> UpdatePrice(SetProductOfferCommand setProductOfferCommand)
+        {
+
+
+            var result = await _mediator.Send(setProductOfferCommand);
+            return Ok(result);
+
+        }
+
+        [Authorize]
         [HttpPut]
         public async Task<IActionResult> Update(BuyProductCommand buyProductModel)
         {
@@ -117,7 +129,6 @@ namespace MiniCommerce.API.Controllers
 
             var result = await _mediator.Send(buyProductModel);
             return Ok(result);
-
 
             //if (ModelState.IsValid)
             //{

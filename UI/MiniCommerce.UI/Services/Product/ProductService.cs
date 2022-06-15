@@ -54,6 +54,11 @@ namespace MiniCommerce.UI.Services.Product
             var result = await _client.PutAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Product", buyProductModel);
             return result;
         }
+        public async Task<ServiceResponse<bool>> SetPriceAsync(ProductModel setProductModel)
+        {
+            var result = await _client.PutAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Product/Price", setProductModel);
+            return result;
+        }
 
         //public async Task<ServiceResponse<bool>> UpdateAsync(UpdateOrganizasyonModel updateOrganizasyonAylikHesapModel)
         //{

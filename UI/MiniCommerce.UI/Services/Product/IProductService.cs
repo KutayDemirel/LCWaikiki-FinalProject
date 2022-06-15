@@ -12,6 +12,7 @@ namespace MiniCommerce.UI.Services.Product
         Task<ServiceResponse<IReadOnlyList<ProductModel>>> GetProductsByCategory(int id);
         Task<ServiceResponse<bool>> AddAsync(AddProductModel addProductModel);
         Task<ServiceResponse<bool>> BuyAsync(ProductModel buyProductModel);
+        Task<ServiceResponse<bool>> SetPriceAsync(ProductModel setProductModel);
 
 
     }

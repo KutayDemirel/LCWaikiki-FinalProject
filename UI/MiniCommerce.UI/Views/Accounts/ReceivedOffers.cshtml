@@ -1,5 +1,7 @@
-﻿@model IEnumerable<GetOffersModel>
+﻿@model ApproveOfferViewModel
 
+
+@section Header{}
 @section Categories{
 
 <div class="list-group">
@@ -13,18 +15,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ProductId);
+                Product
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price);
+                Price
             </th>
             <th>
-
+                Status
             </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.GetOffers)
         {
         <tr>
             <td>
@@ -39,8 +41,11 @@
 
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group mr-2" role="group">
-                        @using (Html.BeginForm("Approve", "Offers", item, FormMethod.Post)){
-                        <input type="submit" value="Approve" asp-controller="Offers" asp-action="Approve" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success ">
+                        @using (Html.BeginForm("Approve", "Offers", Model, FormMethod.Post)){
+                           @* <input type="hidden" name="Product.Id" value="@item.ProductId"/>
+                            <input type="hidden" name="Product.Price" value="@item.Price"/>*@
+                            <input type="hidden" name="Offer.Id" value="@item.Id"/>
+                        <input type="submit" value="Approve" asp-controller="Offers" asp-action="Approve"  class="btn btn-sm btn-outline-success ">
                         }
 
                     </div>

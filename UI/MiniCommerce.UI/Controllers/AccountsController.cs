@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MiniCommerce.UI.Services.Offer;
+using MiniCommerce.UI.ViewModels;
 using System.Threading.Tasks;
 
 namespace MiniCommerce.UI.Controllers
@@ -24,7 +25,11 @@ namespace MiniCommerce.UI.Controllers
         public async Task<IActionResult> ReceivedOffers()
         {
             var offers = await _offerService.GetReceivedOffers();
-            return View(offers.Data);
+            ApproveOfferViewModel vm = new ApproveOfferViewModel()
+            {
+                GetOffers = offers.Data
+            };
+            return View(vm);
         }
 
         [HttpGet]

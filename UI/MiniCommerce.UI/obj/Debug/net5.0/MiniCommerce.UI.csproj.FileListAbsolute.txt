@@ -160,7 +160,6 @@ C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\CategoryTest\AddCategory.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\CategoryTest\Index.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\AddProduct.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\Details.cshtml.g.cs
@@ -195,3 +194,4 @@ C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Accounts\Index.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Accounts\ReceivedOffers.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Accounts\SubmittedOffers.cshtml.g.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\OfferBuyProduct.cshtml.g.cs

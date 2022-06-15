@@ -161,10 +161,10 @@ namespace MiniCommerce.UI
             app.UseEndpoints(endpoints =>
             {
                 //endpoints.MapControllerRoute(
-                //    "blog", 
-                //    "{controller}/CategoryProducts={id}", 
+                //    "blog",
+                //    "{controller}/{action}/{id}?{price}",
                 //    new { controller = "Product", action = "CategoryProducts" });
-                    
+
 
                 endpoints.MapControllerRoute(
                     name : "default",
