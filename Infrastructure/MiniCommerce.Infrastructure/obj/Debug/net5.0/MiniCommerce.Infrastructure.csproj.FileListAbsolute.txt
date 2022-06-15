@@ -1,0 +1,17 @@
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Infrastructure.deps.json
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\ref\MiniCommerce.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Infrastructure.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Application.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Application.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\bin\Debug\net5.0\MiniCommerce.Domain.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.AssemblyInfo.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.csproj.CopyComplete
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\ref\MiniCommerce.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Infrastructure\MiniCommerce.Infrastructure\obj\Debug\net5.0\MiniCommerce.Infrastructure.pdb

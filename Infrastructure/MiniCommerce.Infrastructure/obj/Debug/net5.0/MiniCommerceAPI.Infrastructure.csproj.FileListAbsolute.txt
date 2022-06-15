@@ -1,0 +1,17 @@
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Infrastructure.deps.json
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\ref\MiniCommerceAPI.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Infrastructure.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Application.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Application.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\bin\Debug\net5.0\MiniCommerceAPI.Domain.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.csproj.CopyComplete
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\ref\MiniCommerceAPI.Infrastructure.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Infrastructure\MiniCommerceAPI.Infrastructure\obj\Debug\net5.0\MiniCommerceAPI.Infrastructure.pdb

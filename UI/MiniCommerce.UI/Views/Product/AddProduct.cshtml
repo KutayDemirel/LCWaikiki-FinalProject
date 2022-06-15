@@ -1,0 +1,174 @@
+﻿@{
+    ViewData["Title"] = "AddProduct";
+}
+
+
+@model AddProductModel
+
+
+@section Scripts{
+
+<script>
+    $(".select-add-placeholder").prepend("<option value=''>None</option>");
+</script>
+<script>
+    $(".select-add-place").prepend("<option value='' >None</option>");
+</script>
+
+<script type="text/javascript">
+    $(".custom-file-input").on("change",function (){
+        var fileName =$(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+
+<script>
+    document.getElementById('select_status').value="<?php echo set_value('status'); ?>";
+</script>
+}
+
+
+<h1>Add Your Product</h1>
+<hr>
+<div class="col-md-9">
+    <div class="login-box">
+        @*<div class="login-logo">
+            <a href="~/admin/index2.html">Ürün Ekleme</a>
+            </div>*@
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                @*<p class="login-box-msg">
+                    <div asp-validation-summary="All"></div>
+                    </p>*@
+                <form enctype="multipart/form-data" asp-action="AddProduct" asp-controller="Product" id="myForm">
+                    @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+                    <div class="input-group mb-3">
+                        <input asp-for="Name" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Name)" />
+                        @*@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })*@
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="CategoryId">Categories</label>
+                        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control">
+                            <option value="-1" disabled selected>Please choose..</option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="BrandId">Brands</label>
+                        <select asp-for="BrandId" asp-items="ViewBag.Brands" class="form-control select-add-place">
+                            <option value="-1" disabled selected>Please choose..</option>
+                        </select>
+                        <span asp-validation-for="BrandId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ColorId">Colors</label>
+                        <select asp-for="ColorId" asp-items="ViewBag.Colors" class="form-control select-add-placeholder">
+                            <option value="-1" disabled selected>Please choose..</option>
+                        </select>
+                        <span asp-validation-for="ColorId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="UsageId">Usage Status</label>
+                        <select asp-for="UsageId" asp-items="ViewBag.Usages" class="form-control">
+                            <option value="-1" disabled selected>Please choose..</option>
+                        </select>
+                        <span asp-validation-for="UsageId" class="text-danger"></span>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input asp-for="Description" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Description)" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <input asp-for="Stock" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Stock)" />
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                        <span asp-validation-for="Stock" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <input asp-for="Price" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Price)" />
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                        <span asp-validation-for="Price" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="IsOfferable">Do you want your product to be offerable?</label>
+                        <select asp-for="IsOfferable" asp-items="ViewBag.IsOfferable" class="form-control">
+                            <option value="-1" disabled selected>Please Choose..</option>
+                        </select>
+                        <span asp-validation-for="IsOfferable" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Image" class="control-label"></label>
+                        <div class="custom-file">
+                            <input asp-for="Image" class="custom-file-input" id="Image"
+                                   onchange="document.getElementById('ImagePrv').src = window.URL
+                            .createObjectURL(this.files[0])" />
+                            <label class="custom-file-label" for="Image">Choose File</label>
+                        </div>
+                        <span asp-validation-for="Image" class="text-danger"></span>
+
+                        <img id="ImagePrv" src="~/images/PictureIcon.png" alt="Uploaded Image" width="150"
+                             height="150" style="border:1px ;margin-top:20px; margin-left:120px" />
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Ürün Ekle</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+</div>
+
+

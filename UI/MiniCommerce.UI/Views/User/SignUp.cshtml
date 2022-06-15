@@ -1,0 +1,72 @@
+﻿
+@{
+	ViewData["Title"] = "SignIn";
+}
+<h1>Sign Up</h1>
+
+@model SignUpModel
+
+<div class="login-box">
+	
+	<!-- /.login-logo -->
+	<div class="card col-md-6">
+		<div class="card-body login-card-body">
+			<p class="login-box-msg">
+				<div asp-validation-summary="All"></div>
+			</p>
+			<form asp-action="SignUp" asp-controller="User" id="myForm">
+				<div class="input-group mb-3">
+					<input asp-for="Email" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Email)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input asp-for="FirstName" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.FirstName)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input asp-for="LastName" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.LastName)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input asp-for="Address" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Address)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input asp-for="Password" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Password)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+					</div>
+					<!-- /.col -->
+					<div class="col-4">
+						<button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+					</div>
+					<!-- /.col -->
+				</div>
+			</form>
+
+		</div>
+		<!-- /.login-card-body -->
+	</div>
+</div>

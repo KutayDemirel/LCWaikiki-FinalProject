@@ -1,0 +1,28 @@
+﻿@model ProductModel
+
+<div class="card">
+    <img class="card-img-top" src="~/images/@Model.ImageUrl" alt="" />
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Usage</p>
+        <p class="card-text">@Model.Color</p>
+        <p class="card-text">@Model.Brand</p>
+        <p class="card-text">@Model.IsSold.ToString()</p>
+
+        <a class="btn btn-primary" asp-action="Details" asp-controller="Product" asp-route-id=@Model.Id>İncele</a>
+        @if (@Model.IsSold is false)
+        {
+            <a class="btn btn-primary" asp-action="BuyProduct" asp-controller="Product" asp-route-id="@Model.Id">Satın Al</a>
+
+            if (@Model.IsOfferable is true)
+            {
+                <a class="btn btn-primary" asp-action="Make" asp-controller="Offers" asp-route-id="@Model.Id">Teklif Ver</a>
+                @*<a href="~/Offers/Make/@Model.Id" class="btn btn-primary">Teklif Ver</a>*@
+            }
+        }
+        else
+        {
+            <p class="alert-warning">Bu Ürün satışta değil</p>
+        }
+    </div>
+</div>

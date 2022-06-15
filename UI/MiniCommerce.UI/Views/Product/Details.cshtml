@@ -1,0 +1,84 @@
+﻿@using MiniCommerce.UI.Controllers
+@model ProductModel
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="card">
+    <div class="col-md-4">
+    <img class="card-img-top" src="~/images/@Model.ImageUrl" alt="" />
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text">@Model.Brand</p>
+        <p class="card-text">@Model.Color</p>
+        <p class="card-text">@Model.Usage</p>
+        @*<p class="card-text">@Model.Color</p>*@
+        <p class="card-text">@Model.Price</p>
+        @if (@Model.IsSold == false)
+        {
+            <form method="get">
+                <button asp-controller="Product" asp-action="*" asp-route-id="@Model.Id" type="submit" class="btn btn-primary">Satın Al</button>
+                <button asp-controller="Product" asp-action="*" asp-route-id="@Model.Id" type="submit" class="btn btn-primary">Teklif Ver</button>
+                @*<a asp-action="Index" class="btn btn-default">Cancel</a>*@
+            </form>
+        }else{
+            <p class="alert-warning">BU ürün satışta değil</p>
+        }
+            <!--    Pop Up Çalışması -->
+            @*<div class="modal fade" id="UyeOl" tabindex="-1" role="dialog" aria-labelledby="">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Üye Ol</h4>
+                        </div>
+                        <form method="post" action="/home/uyeol">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>
+                                        Kullanıcı adınız
+                                        <input type="text" name="kullaniciad" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Kullanıcı şifreniz</label>
+                                    <input type="password" name="sifre" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-primary">Üye Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>*@
+        
+    </div>
+    </div>
+</div>
+
+
+
+
+@*@if (@Model.IsOfferable)
+    {
+    <table class="table table-bordered">
+    <tr>
+    <th>#</th>
+    <th>İsimleri</th>
+    <th>Sil</th>
+    <th>Düzenle</th>
+    </tr>
+    <tr>
+    <td>@Model.Name</td>
+    <td>@Model.Description</td>
+    <td>@Model.Color</td>
+    </tr>
+
+    </table>
+    }*@

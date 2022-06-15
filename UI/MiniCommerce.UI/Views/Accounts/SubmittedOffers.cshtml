@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GetOffersModel>
+
+@section Categories{
+
+<div class="list-group">
+    <a href="~/Accounts/SubmittedOffers" class="list-group-item list-group-item-action">Your Offers</a>
+    <a href="~/Accounts/ReceivedOffers" class="list-group-item list-group-item-action">Received Offers</a>
+</div>
+}
+
+@*<div class="table-responsive">*@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId);
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price);
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group mr-2" role="group">
+                            @if (item.IsApproved is true)
+                            {
+
+                                <a class="btn btn-primary" asp-action="BuyProduct" asp-controller="Product" asp-route-id="@item.ProductId">Buy Product</a>
+                                @*@using (Html.BeginForm("BuyProduct", "Product", FormMethod.Post))
+                                {
+                                    <input type="submit" value="Buy Product" asp-controller="Product" asp-action="BuyProduct" asp-route-id="@item.ProductId" class="delete btn btn-sm btn-success">
+                                }*@
+                            }
+
+                        </div>
+                        <div class="btn-group mr-2" role="group">
+                            @using (Html.BeginForm("Delete", "Offers", FormMethod.Post))
+                            {
+                                <input type="submit" value="Withdraw" asp-controller="Offers" asp-action="Delete" asp-route-id="@item.Id" class="delete btn btn-sm btn-outline-danger ">
+
+                            }
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@*</div>*@
+

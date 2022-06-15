@@ -1,0 +1,12 @@
+﻿@using MiniCommerce.UI.Controllers
+@model Class1
+@{
+    ViewData["Title"] = "AddCategory";
+}
+<form method="post">
+    <label>Category Adı</label>
+    <input type="text" asp-for="@Model.Name" class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-info">Category Ekle</button>
+</form>
+

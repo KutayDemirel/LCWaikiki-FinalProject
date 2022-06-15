@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8892f38d-a0b1-4612-8a06-0637f96285bb": {
+      "ProjectGuid": "8892f38d-a0b1-4612-8a06-0637f96285bb",
+      "DisplayName": "MiniCommerce.Domain",
+      "ColorIndex": 0
+    },
+    "05d50e5e-08ed-41ed-be50-00e1e6d45d55": {
+      "ProjectGuid": "05d50e5e-08ed-41ed-be50-00e1e6d45d55",
+      "DisplayName": "MiniCommerce.Application",
+      "ColorIndex": 1
+    },
+    "f5ef3452-17a9-4997-b79f-e05e9e06267a": {
+      "ProjectGuid": "f5ef3452-17a9-4997-b79f-e05e9e06267a",
+      "DisplayName": "MiniCommerce.Infrastructure",
+      "ColorIndex": 2
+    },
+    "c0af953c-b237-4b58-a1dd-cf1029aee3de": {
+      "ProjectGuid": "c0af953c-b237-4b58-a1dd-cf1029aee3de",
+      "DisplayName": "MiniCommerce.Persistence",
+      "ColorIndex": 3
+    },
+    "a0cd884a-d129-46a3-b822-7f4476875932": {
+      "ProjectGuid": "a0cd884a-d129-46a3-b822-7f4476875932",
+      "DisplayName": "MiniCommerce.API",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "4e30f154-289e-48d8-9309-a8da0169e6d1": {
+      "ProjectGuid": "4e30f154-289e-48d8-9309-a8da0169e6d1",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 5
+    },
+    "538fd64a-224a-43dd-8664-8e2a5f0b0fdd": {
+      "ProjectGuid": "538fd64a-224a-43dd-8664-8e2a5f0b0fdd",
+      "DisplayName": "WebApplication2",
+      "ColorIndex": 6
+    },
+    "986879cb-d259-46c0-b8d3-472884991c70": {
+      "ProjectGuid": "986879cb-d259-46c0-b8d3-472884991c70",
+      "DisplayName": "MiniCommerce.UI",
+      "ColorIndex": 7
+    },
+    "f3f9811a-4d61-4c6e-9fe4-68a7c2eed78b": {
+      "ProjectGuid": "f3f9811a-4d61-4c6e-9fe4-68a7c2eed78b",
+      "DisplayName": "ClientDeneme",
+      "ColorIndex": 8
+    }
+  },
+  "NextColorIndex": 9
+}

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<GetOffersModel>
+
+@section Categories{
+
+<div class="list-group">
+    <a href="~/Accounts/SubmittedOffers" class="list-group-item list-group-item-action">Your Offers</a>
+    <a href="~/Accounts/ReceivedOffers" class="list-group-item list-group-item-action">Received Offers</a>
+</div>
+}
+
+@*<div class="table-responsive">*@
+<table class="table table-bordered table-hover" ">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId);
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price);
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+
+                @if(item.IsApproved == false){
+
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-group mr-2" role="group">
+                        @using (Html.BeginForm("Approve", "Offers", item, FormMethod.Post)){
+                        <input type="submit" value="Approve" asp-controller="Offers" asp-action="Approve" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success ">
+                        }
+
+                    </div>
+                    <div class="btn-group mr-2" role="group">
+
+                        @using (Html.BeginForm("Delete", "Offers",item, FormMethod.Post))
+                        {
+                        <input type="submit" value="Refuse" asp-controller="Offers" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
+                        }
+                    </div>
+                </div>
+
+                }else{
+                <p>Product has been approved</p>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@*</div>*@
+
+
+                            @*<a class="btn btn-danger" asp-controller="Offers" asp-action="Delete" asp-route-id="@item.Id">Refuse</a>
+                                                        <a href="~/Offers/Delete/ @item.Id">Refuse</a>
+                                                        <input type="submit" value="Delete" asp-route-id="@item.Id" class="delete btn btn-sm btn-outline-danger ">
+                                                        <a class="delete btn btn-outline-danger btn-sm" data-id="@item.Id">Refuse</a>
+                                                        <a class="delete btn btn-outline-danger btn-sm" data-id="@item.Id">Sil</a>*@

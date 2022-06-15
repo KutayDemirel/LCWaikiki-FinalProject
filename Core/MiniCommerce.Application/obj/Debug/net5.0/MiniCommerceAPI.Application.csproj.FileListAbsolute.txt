@@ -1,0 +1,15 @@
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\bin\Debug\net5.0\MiniCommerceAPI.Application.deps.json
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\bin\Debug\net5.0\MiniCommerceAPI.Application.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\bin\Debug\net5.0\ref\MiniCommerceAPI.Application.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\bin\Debug\net5.0\MiniCommerceAPI.Application.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\bin\Debug\net5.0\MiniCommerceAPI.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\bin\Debug\net5.0\MiniCommerceAPI.Domain.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.csproj.AssemblyReference.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.AssemblyInfoInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.AssemblyInfo.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.csproj.CopyComplete
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\ref\MiniCommerceAPI.Application.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerceAPI\Core\MiniCommerceAPI.Application\obj\Debug\net5.0\MiniCommerceAPI.Application.pdb

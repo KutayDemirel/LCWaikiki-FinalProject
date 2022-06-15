@@ -1,0 +1,12 @@
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\bin\Debug\net5.0\MiniCommerce.Domain.deps.json
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\bin\Debug\net5.0\MiniCommerce.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\bin\Debug\net5.0\ref\MiniCommerce.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\bin\Debug\net5.0\MiniCommerce.Domain.pdb
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.csproj.AssemblyReference.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.AssemblyInfo.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\ref\MiniCommerce.Domain.dll
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\Core\MiniCommerce.Domain\obj\Debug\net5.0\MiniCommerce.Domain.pdb
