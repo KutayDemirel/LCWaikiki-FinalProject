@@ -22,7 +22,7 @@ namespace MiniCommerce.UI.Services.Color
 
         public async Task<ServiceResponse<IReadOnlyList<ColorModel>>> GetAllColors()
         {
-            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ColorModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Color");
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ColorModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Colors");
             return result;
         }
     }

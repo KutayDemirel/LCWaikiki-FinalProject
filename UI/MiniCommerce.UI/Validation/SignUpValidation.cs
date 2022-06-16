@@ -17,6 +17,12 @@ namespace MiniCommerce.UI.Validation
             RuleFor(p => p.Address).NotEmpty().WithMessage("Adres alanı boş olamaz");
             RuleFor(p => p.Email).EmailAddress().WithMessage("Email alanı doğru girilmedi");
             RuleFor(p => p.Password).NotEmpty().WithMessage("Sifre alanını doldurmaniz gerekiyor");
+            RuleFor(p => p.Password).MinimumLength(8).WithMessage("Şifren en az 8 karakter içermelidir.")
+                    .MaximumLength(16).WithMessage("Şifren en fazla 16 karakter içermelidir.")
+                    .Matches(@"[A-Z]+").WithMessage("Şifrende en az bir büyük harf olmalıdır.")
+                    //.Matches(@"[a-z]+").WithMessage("Şifrende en az bir küçük harf olmalıdır.")
+                    .Matches(@"[0-9]+").WithMessage("Şifrende en az bir sayı olmalıdır.")
+                    .Matches(@"[\!\?\*\.]+").WithMessage("Şifrende en az bir özel karakter olmalıdır.");
         }
     }
 }

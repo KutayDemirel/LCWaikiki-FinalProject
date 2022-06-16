@@ -22,7 +22,7 @@ namespace MiniCommerce.UI.Services.Brand
 
         public async Task<ServiceResponse<IReadOnlyList<BrandModel>>> GetAllBrands()
         {
-            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<BrandModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Brand");
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<BrandModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Brands");
             return result;
         }
     }

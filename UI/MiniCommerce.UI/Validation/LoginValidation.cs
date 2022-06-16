@@ -11,6 +11,7 @@ namespace MiniCommerce.UI.Validation
             RuleFor(p => p.Email).NotEmpty().WithMessage("Email alanı boş olamaz");
             RuleFor(p => p.Email).EmailAddress().WithMessage("Email alanı doğru girilmedi");
             RuleFor(p => p.Password).NotEmpty().WithMessage("Sifre alanını doldurmanız gerekiyor");
+            RuleFor(p => p.Password).NotNull().WithMessage("Hatalı şifre girdiniz");
         }
 
     }

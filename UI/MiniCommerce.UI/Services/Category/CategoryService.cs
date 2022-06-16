@@ -22,7 +22,7 @@ namespace MiniCommerce.UI.Services.Category
      
         public async Task<ServiceResponse<List<CategoryModel>>> GetAllCategories()
         {
-            var result = await _client.ReadContentAs<ServiceResponse<List<CategoryModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Category");
+            var result = await _client.ReadContentAs<ServiceResponse<List<CategoryModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Categories");
             return result;
         }
     }

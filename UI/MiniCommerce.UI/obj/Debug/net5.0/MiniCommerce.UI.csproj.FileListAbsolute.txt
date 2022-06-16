@@ -187,9 +187,9 @@ C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\bin\Debug\net5.0\System.IO.Pipelines.dll
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\BuyProduct.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Offers\Make.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\Category.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Accounts\Index.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Accounts\ReceivedOffers.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Accounts\SubmittedOffers.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\OfferBuyProduct.cshtml.g.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Account\ReceivedOffers.cshtml.g.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Account\SubmittedOffers.cshtml.g.cs
+C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Offer\Make.cshtml.g.cs

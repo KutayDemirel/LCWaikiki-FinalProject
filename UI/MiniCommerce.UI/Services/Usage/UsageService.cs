@@ -22,7 +22,7 @@ namespace MiniCommerce.UI.Services.Usage
 
         public async Task<ServiceResponse<IReadOnlyList<UsageModel>>> GetAllUsages()
         {
-            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<UsageModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Usage");
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<UsageModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Usages");
             return result;
         }
     }

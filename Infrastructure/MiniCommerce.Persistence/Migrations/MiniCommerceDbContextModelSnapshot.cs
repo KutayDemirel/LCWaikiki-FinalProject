@@ -216,28 +216,28 @@ namespace MiniCommerce.Persistence.Migrations
                         {
                             Id = 1,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Soğuk zamanlarda bire bir",
                             Name = "Mont"
                         },
                         new
                         {
                             Id = 2,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Baharda üşümeyin tutar",
                             Name = "Hırka ve Süveter"
                         },
                         new
                         {
                             Id = 3,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Kışın üşümeyin diye",
                             Name = "Kazak"
                         },
                         new
                         {
                             Id = 4,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Keten Rahatlığı",
+                            Description = "Şık zamanların tercihi",
                             Name = "Gömlek"
                         },
                         new
@@ -251,21 +251,21 @@ namespace MiniCommerce.Persistence.Migrations
                         {
                             Id = 6,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Favorilerini seç, en trend ürünleri keşfet",
+                            Description = "Favorilerini seç soğuktan korun",
                             Name = "Sweatshirt"
                         },
                         new
                         {
                             Id = 7,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Sezonun en hit parçalarını keşfet",
+                            Description = "Rahat pantolonlarla kendini keşfet",
                             Name = "Jean"
                         },
                         new
                         {
                             Id = 8,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "demodemodemo",
+                            Description = "Güzel görünmenin vakti",
                             Name = "Elbise"
                         });
                 });
@@ -537,150 +537,6 @@ namespace MiniCommerce.Persistence.Migrations
                             Price = 84.00m,
                             ProductId = 12,
                             UserId = 1
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 95.00m,
-                            ProductId = 1,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 56.00m,
-                            ProductId = 2,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 76.00m,
-                            ProductId = 3,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 63.00m,
-                            ProductId = 4,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 95.00m,
-                            ProductId = 1,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 23,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 56.00m,
-                            ProductId = 2,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 24,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 76.00m,
-                            ProductId = 3,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 25,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 63.00m,
-                            ProductId = 3,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 26,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 95.00m,
-                            ProductId = 1,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 27,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 56.00m,
-                            ProductId = 2,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 28,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 76.00m,
-                            ProductId = 3,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 29,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 63.00m,
-                            ProductId = 4,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 30,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 95.00m,
-                            ProductId = 1,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 31,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 56.00m,
-                            ProductId = 2,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 32,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 76.00m,
-                            ProductId = 3,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 33,
-                            CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            Price = 63.00m,
-                            ProductId = 4,
-                            UserId = 4
                         });
                 });
 
@@ -763,13 +619,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 1,
                             ColorId = 7,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWCASUALBejMont.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Slim Fit Kapüşonlu İnce Erkek Kanguru Mont",
                             Price = 309.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 1
                         },
@@ -780,13 +636,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 1,
                             ColorId = 5,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWCASUALPembeMont.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Dik Yaka Düz Uzun Kollu İnce Kadın Mont",
                             Price = 319.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 2,
                             UserId = 1
                         },
@@ -797,13 +653,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 2,
                             ColorId = 4,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWBASICBeyazHirka.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Bisiklet Yaka Düz Uzun Kollu Viskon Kadın Hırka",
                             Price = 59.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 3,
                             UserId = 1
                         },
@@ -814,13 +670,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 2,
                             ColorId = 6,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "XSIDEYeşilHırka.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Dik Yaka Düz Uzun Kollu Crop Kadın Hırka",
                             Price = 109.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 1
                         },
@@ -831,13 +687,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 3,
                             ColorId = 2,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWVISIONSarıKazak.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Bisiklet Yaka Uzun Kollu Erkek Triko Kazak",
                             Price = 139.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 2,
                             UserId = 2
                         },
@@ -848,13 +704,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 3,
                             ColorId = 3,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWCASUALKirmiziKazak.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Bisiklet Yaka Düz Uzun Kollu Kadın Triko Kazak",
                             Price = 99.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 2
                         },
@@ -865,13 +721,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 4,
                             ColorId = 8,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWFORMALMaviGomlek.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Slim Fit Uzun Kollu Poplin Erkek Gömlek",
                             Price = 289.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 3
                         },
@@ -882,13 +738,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 4,
                             ColorId = 4,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWVISIONBeyazGomlek.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Önden Düğme Kapamalı Düz Kısa Kollu Poplin Kadın Gömlek",
                             Price = 149.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 2,
                             UserId = 3
                         },
@@ -899,13 +755,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 5,
                             ColorId = 2,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "XSIDESarıTisort.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Bisiklet Yaka Baskılı Kısa Kollu Pamuklu Crop Kadın Tişört",
                             Price = 99.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 3,
                             UserId = 3
                         },
@@ -916,13 +772,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 5,
                             ColorId = 1,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWCASUALSiyahTisort.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Polo Yaka Kısa Kollu Pike Erkek Tişört",
                             Price = 149.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 4
                         },
@@ -933,13 +789,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 6,
                             ColorId = 8,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "XSIDEMaviSweatShirt.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Kapüşon Yaka Nakışlı Uzun Kollu Kadın Sweatshirt",
                             Price = 89.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 3,
                             UserId = 5
                         },
@@ -950,13 +806,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 6,
                             ColorId = 6,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "XSIDEYeşilSweatShirt.jpg",
                             IsOfferable = true,
                             IsSold = false,
                             Name = "Kapüşonlu Uzun Kollu Baskılı Erkek Sweatshirt",
                             Price = 199.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 2,
                             UserId = 6
                         },
@@ -967,13 +823,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 7,
                             ColorId = 9,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWCASULGriJean.jpg",
-                            IsOfferable = true,
+                            IsOfferable = false,
                             IsSold = false,
                             Name = "750 Slim Fit Erkek Jean Pantolon",
                             Price = 189.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 7
                         },
@@ -984,13 +840,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 8,
                             ColorId = 6,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWVISIONYesilElbise.jpg",
-                            IsOfferable = true,
+                            IsOfferable = false,
                             IsSold = false,
                             Name = "Halter Yaka Düz Kolsuz Kadın Elbise",
                             Price = 199.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 2,
                             UserId = 8
                         },
@@ -1001,13 +857,13 @@ namespace MiniCommerce.Persistence.Migrations
                             CategoryId = 8,
                             ColorId = 5,
                             CreatedDate = new DateTime(2022, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Soğuk kış günleri üşümeyin diye",
+                            Description = "Hayatın keyfini çıkarın",
                             ImageUrl = "LCWCASUALPembeElbise.jpg",
-                            IsOfferable = true,
+                            IsOfferable = false,
                             IsSold = false,
                             Name = "U Yaka Düz Askılı A Kesim Poplin Kadın Elbise",
                             Price = 199.99m,
-                            Stock = 400,
+                            Stock = 1,
                             UsageId = 1,
                             UserId = 2
                         });
@@ -1174,7 +1030,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "3029a764-6a3a-449e-97f7-47e894dd2ac2",
+                            ConcurrencyStamp = "e75a9ef3-4358-4d1d-b75a-b51ed77054d2",
                             Email = "kutay@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Kutay",
@@ -1182,9 +1038,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "KUTAY@SEEDDATA.COM",
                             NormalizedUserName = "KUTAY@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEALXsS2eMsatIkudmIF5qogcN6ZnspRIyp0zyD/5aD4tkDP+fONfQ05QkBxeLYChBQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOmWYZlMpMeowRqVU42bkFTtizThbu630cu5fU2Cnh4ltN7+gwyhVpeEmh6jyaXeww==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6d831826-8f58-4919-b74d-b1c3047e9887",
+                            SecurityStamp = "7e330673-5a92-4603-9da7-3ac4b6f53b25",
                             TwoFactorEnabled = false,
                             UserName = "kutay@seeddata.com"
                         },
@@ -1193,7 +1049,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 2,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "b4b38e6c-f26d-4704-bb4b-61f6e92d185f",
+                            ConcurrencyStamp = "aa2eb667-2e85-4473-bc38-556e076ef982",
                             Email = "lale@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Lale",
@@ -1201,9 +1057,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "LALE@SEEDDATA.COM",
                             NormalizedUserName = "LALE@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFEnKoYWDA5REwdDVuhIcUNCgCBkiELLCPGSOptZYHD4SG8+atYUBeA3p7iCaQLMQQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBbEqLcKxydd3m3zTDgJ74paOKx6uWwObpFOIVnqGmXGzz8IMPgHX7nV60IZSNlknQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "caa06908-1d9c-40d6-9a6b-456031cab0fb",
+                            SecurityStamp = "96e41dce-e385-4a0e-a241-2afbffcdf5d7",
                             TwoFactorEnabled = false,
                             UserName = "lale@seeddata.com"
                         },
@@ -1212,7 +1068,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 3,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "2f29f285-da46-4794-a452-2dd5cec34131",
+                            ConcurrencyStamp = "3715e4f0-307f-4b44-8afc-8831a5b616d8",
                             Email = "mehmet@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Mehmet",
@@ -1220,9 +1076,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "MEHMET@SEEDDATA.COM",
                             NormalizedUserName = "MEHMET@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFEBJ2aAY8OF95Pfm5luVfZP3vLvRXlMTevtSXCcaW4iweM4HCFD9sHW9KqAmi9hhQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMuT292bXv9uZYFzEURA3xiX/YvmZ8zKt7jwcxkCQpQlpvnJbA9T5wK3yn+l75rGsg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2cc2d5c3-33e9-4ede-afdf-503684ed36d9",
+                            SecurityStamp = "28c68f35-d8e0-40e8-9a8b-1d5fae9d4b93",
                             TwoFactorEnabled = false,
                             UserName = "mehmet@seeddata.com"
                         },
@@ -1231,7 +1087,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 4,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "647cf05e-b262-4e21-9df8-b4cf81815168",
+                            ConcurrencyStamp = "e6aff20a-4256-4025-93a2-d86544418e60",
                             Email = "sezer@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Sezer",
@@ -1239,9 +1095,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SEZER@SEEDDATA.COM",
                             NormalizedUserName = "SEZER@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEDiiJllm9DYkq+LMts6An+5esmY7528Ct/irlOYb5VkyURU6v9HHXKPQsw0MXx1bQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEA3W/ii7VAwyY4F1T+IDTE4TwfbiCxpTEIKXOD05/uHoippkAjXLV1LeRg3NHGr+AA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "312abd5e-23c1-47e1-9e77-602247dfcedd",
+                            SecurityStamp = "84908030-83c1-4e61-a9d6-0f2aa7325845",
                             TwoFactorEnabled = false,
                             UserName = "sezer@seeddata.com"
                         },
@@ -1250,7 +1106,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 5,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "abd10ed4-f9a9-474c-8205-feba049d588d",
+                            ConcurrencyStamp = "2cd43b4c-01ce-43d0-81c9-ba3a0e124b0e",
                             Email = "mert@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Mert",
@@ -1258,9 +1114,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "MERT@SEEDDATA.COM",
                             NormalizedUserName = "MERT@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKSocIG+Ir3icu3g9dVI8wnH/tYn6WLQZ2sbCOsN340IrtSwLWwo2z9hTaxduPOiHQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMBMvWjGehJh9TO0U6wIhmP90tUvpMjoqFQ0pf0fU/2LMEeXxZbc/JZI/Jf/AsCQCg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7a59d923-7ab4-4b92-819e-09cda269ea6a",
+                            SecurityStamp = "78ce31a5-21b4-4b81-9c85-1a82e3b2c357",
                             TwoFactorEnabled = false,
                             UserName = "mert@seeddata.com"
                         },
@@ -1269,7 +1125,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 6,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "f5f538bc-e164-4603-9b1c-8da14e95ee87",
+                            ConcurrencyStamp = "adb8531a-12da-4a55-978b-341805d5c6f6",
                             Email = "kaan@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Kaan",
@@ -1277,9 +1133,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "KAAN@SEEDDATA.COM",
                             NormalizedUserName = "KAAN@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIatt06se/WvOl1i7zLt+MAWqnx6WVhxBMKMmHypymu95W5/GUXS6k+TxuJwLDunsQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHlbuyUy+mPQ/OivDuKbuVFPMmd6s5GE39sGUuSiP+hk+p3Ih4QwESbryzE7Nht7yw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f2ce2e00-af6b-4553-a703-137e74d3a00c",
+                            SecurityStamp = "1e91665c-26d2-427f-bd3c-8230ec368d08",
                             TwoFactorEnabled = false,
                             UserName = "kaan@seeddata.com"
                         },
@@ -1288,7 +1144,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 7,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "2d55178d-0f01-4171-b565-21963fb513f4",
+                            ConcurrencyStamp = "4ab76ec3-cbd7-47c5-8f9d-6fe82f68fe5d",
                             Email = "bora@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Bora",
@@ -1296,9 +1152,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "BORA@SEEDDATA.COM",
                             NormalizedUserName = "BORA@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFU80SAZq6i4Fkj4e0hFqtjSDHiOt6hCrmXK6XcfGPo7AznDD1V3i4lMH1XL5ECJHw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEA8zGy7Av0RoHjsBx7yS7/SKjf/kRgdGSpciDxB73GIP0/9YL0BGhH9UW45XLhnkAA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1c5c855a-a702-4499-ac07-ef9ecdbbd9d4",
+                            SecurityStamp = "2c98325a-47cb-4884-8a7b-7cc483c9055b",
                             TwoFactorEnabled = false,
                             UserName = "bora@seeddata.com"
                         },
@@ -1307,7 +1163,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 8,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "e2b6682d-e098-4f82-985d-10d15fa6414d",
+                            ConcurrencyStamp = "492866b0-cfe3-4fd1-b880-c18a717f368f",
                             Email = "ahmet@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Ahmet",
@@ -1315,9 +1171,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "AHMET@SEEDDATA.COM",
                             NormalizedUserName = "AHMET@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDuTTpyXo5BphC91PqRxYnQCt72cQSjiug1gm7JS7/jaGQRrTxqLJsQjC33UBkk2lA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOveZRmI0mhNjAzrUEMEGLUgFMLlAJwKFMrUSOjFxc3P66rbnNqUWdMqrE9WjAIEvA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6fc68e24-659c-4927-a50f-4313cf388918",
+                            SecurityStamp = "a29330e5-7cf6-412d-97ec-b19cd969ee94",
                             TwoFactorEnabled = false,
                             UserName = "ahmet@seeddata.com"
                         },
@@ -1326,7 +1182,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 9,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "e261c270-f554-48d0-8bf9-5e8e6abe77ec",
+                            ConcurrencyStamp = "b90d0562-67fd-4074-b625-93f1c5655262",
                             Email = "fatma@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Fatma",
@@ -1334,9 +1190,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "FATMA@SEEDDATA.COM",
                             NormalizedUserName = "FATMA@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAED+vV6YtNtgKXzdwbFdT+a+RyAyxvTb9NKmRsZ4lgZAMddORoLT50Ypu7qPo50WUHg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENpVZvEkPNKKbpOueVayIGvi2ihHTvBzFgBO98AVs5ikKiofu33rbdSIx1pwmTfUyA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a64ff488-a17d-4403-a61e-7b4e644eb3fb",
+                            SecurityStamp = "e8047a17-eeeb-47b4-b5ef-bbab55b33063",
                             TwoFactorEnabled = false,
                             UserName = "fatma@seeddata.com"
                         },
@@ -1345,7 +1201,7 @@ namespace MiniCommerce.Persistence.Migrations
                             Id = 10,
                             AccessFailedCount = 0,
                             Address = "İzmir",
-                            ConcurrencyStamp = "967790e2-4bee-4bfc-9cf8-b059a06fd57c",
+                            ConcurrencyStamp = "e8efd284-722c-4c68-8fd0-e160ddc205cb",
                             Email = "ezgi@seeddata.com",
                             EmailConfirmed = true,
                             FirstName = "Ezgi",
@@ -1353,9 +1209,9 @@ namespace MiniCommerce.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "EZGI@SEEDDATA.COM",
                             NormalizedUserName = "EZGI@SEEDDATA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPFWCkkTKIysTmTVweg6GLTqrzzU0IfQnk2MipD2/NunjAi7tggrShLzo+RkHOldoQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEB0PxtZSluYYx+HsL9VpFTcTsnEJsCzUrytUAxgZnQsLJcjPO+fAEqwsuUYdrwwTVA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "51cc305e-29dd-49cf-99f9-8e7fa71fef59",
+                            SecurityStamp = "6b209ab1-d936-4d63-9850-7d901f684428",
                             TwoFactorEnabled = false,
                             UserName = "ezgi@seeddata.com"
                         });

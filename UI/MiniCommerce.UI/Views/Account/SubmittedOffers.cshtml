@@ -1,0 +1,72 @@
+﻿@using System.Linq
+@model ApproveOfferViewModel
+
+@section Header{
+}
+@section Categories{
+
+<div class="list-group">
+    <a href="~/Account/SubmittedOffers" class="list-group-item list-group-item-action">Yaptığın Teklifler</a>
+    <a href="~/Account/ReceivedOffers" class="list-group-item list-group-item-action">Alınan Teklifler</a>
+</div>
+}
+
+@*<div class="table-responsive">*@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Ürün
+            </th>
+            <th>
+                Fiyat
+            </th>
+            <th>
+                Ne Yapmak İstersin ?
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model.GetOffers)
+        {
+            <tr>
+                @if (Model.Products.FirstOrDefault(x => x.Id == item.ProductId).IsSold == false)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Products.FirstOrDefault(x => x.Id == item.ProductId).Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group mr-2" role="group">
+                                @if (item.IsApproved is true)
+                                {
+
+                                    <a class="btn btn-primary" asp-action="OfferBuyProduct" asp-controller="Product" asp-route-id="@item.ProductId" asp-route-price="@item.Price">Satın Al</a>
+                                    @*@using (Html.BeginForm("BuyProduct", "Product", FormMethod.Post))
+                                        {
+                                        <input type="submit" value="Buy Product" asp-controller="Product" asp-action="BuyProduct" asp-route-id="@item.ProductId" class="delete btn btn-sm btn-success">
+                                        }*@
+                                }
+                            </div>
+                            <div class="btn-group" role="group">
+                                @using (Html.BeginForm("Delete", "Offer", FormMethod.Post))
+                                {
+                                    <input type="submit" value="Geri Çek" asp-controller="Offer" asp-action="Delete" asp-route-id="@item.Id" class="delete btn btn-outline-danger ">
+
+                                }
+                            </div>
+                        </div>
+
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+@*</div>*@
+

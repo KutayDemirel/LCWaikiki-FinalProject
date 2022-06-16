@@ -13,10 +13,10 @@
 }
 
 @*@section MessageBox{
-<div class="alert alert-success text-center m-0">
+    <div class="alert alert-success text-center m-0">
     You Have Message!
-</div>
-}*@
+    </div>
+    }*@
 @section Categories{
 @*@await Component.InvokeAsync("Categories")*@
 <div class="list-group">
@@ -28,7 +28,8 @@
 }
 
 
-@if(TempData["AlertMessage"] != null){
+@if (TempData["AlertMessage"] != null)
+{
     <div class="alert alert-success">
         <strong> Başarılı!</strong> @TempData["AlertMessage"]
 
@@ -45,12 +46,11 @@ else
     <div class="row">
         @foreach (var product in products)
         {
-            @if (product.IsOfferable == true)
-            {
-                <div class="col-md-3 d-flex align-items-stretch">
-                    @await Html.PartialAsync("_product",product)
-                </div>
-            }
+
+            <div class="col-md-3 d-flex align-items-stretch">
+                @await Html.PartialAsync("_product",product)
+            </div>
+
         }
     </div>
 }

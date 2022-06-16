@@ -29,7 +29,7 @@
 
                     if (@Model.IsOfferable is true)
                     {
-                        <a class="btn btn-sm btn-outline-primary" style="margin-bottom:10px" asp-action="Make" asp-controller="Offers" asp-route-id="@Model.Id">Teklif Ver</a>
+                        <a class="btn btn-sm btn-outline-primary" style="margin-bottom:10px" asp-action="Make" asp-controller="Offer" asp-route-id="@Model.Id">Teklif Ver</a>
                     }else{
                         <p class="alert-danger">Ürün'e teklif verilemez</p>
                     }

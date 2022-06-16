@@ -42,8 +42,8 @@ namespace MiniCommerce.UI.Services
 
             var response = await _client.PostAsync(url, content);
 
-            //if (!response.IsSuccessStatusCode)
-            //    throw new ApplicationException($"Something went wrong calling the API: {response.ReasonPhrase}");
+            if (!response.IsSuccessStatusCode)
+                return "Şifre veya E-mail'i hatalı girdiniz";
             //else if (response.StatusCode == HttpStatusCode.BadRequest)
             //    throw new Exception("Hata Oluştu");
 

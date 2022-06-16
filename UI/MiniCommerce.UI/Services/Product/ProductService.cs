@@ -21,48 +21,48 @@ namespace MiniCommerce.UI.Services.Product
 
         public async Task<ServiceResponse<IReadOnlyList<ProductModel>>> GetAllProducts()
         {
-            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Product");
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Products");
             return result;
         }
         
         public async Task<ServiceResponse<IReadOnlyList<ProductModel>>> GetProductsByUserId()
         {
-            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Product/User");
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Products/User");
             return result;
         }
 
         public async Task<ServiceResponse<ProductModel>> GetByIdAsync(int id)
         {
-            var result = await _client.ReadContentAs<ServiceResponse<ProductModel>>(_httpContextAccessor.HttpContext, $"/api/v1/Product/{id}");
+            var result = await _client.ReadContentAs<ServiceResponse<ProductModel>>(_httpContextAccessor.HttpContext, $"/api/v1/Products/{id}");
             return result;
         }
 
 
         public async Task<ServiceResponse<IReadOnlyList<ProductModel>>> GetProductsByCategory(int id)
         {
-            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Product/Search?categoryId={id}");
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Products/Search?categoryId={id}");
             return result;
         }
 
         public async Task<ServiceResponse<ProductModel>> GetProductDetails(int id)
         {
-            var result = await _client.ReadContentAs<ServiceResponse<ProductModel>>(_httpContextAccessor.HttpContext, $"/api/v1/Product/{id}");
+            var result = await _client.ReadContentAs<ServiceResponse<ProductModel>>(_httpContextAccessor.HttpContext, $"/api/v1/Products/{id}");
             return result;
         }
 
         public async Task<ServiceResponse<bool>> AddAsync(AddProductModel addProductModel)
         {
-            var result = await _client.PostAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Product", addProductModel);
+            var result = await _client.PostAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Products", addProductModel);
             return result;
         }
         public async Task<ServiceResponse<bool>> BuyAsync(ProductModel buyProductModel)
         {
-            var result = await _client.PutAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Product", buyProductModel);
+            var result = await _client.PutAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Products", buyProductModel);
             return result;
         }
         public async Task<ServiceResponse<bool>> SetPriceAsync(ProductModel setProductModel)
         {
-            var result = await _client.PutAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Product/Price", setProductModel);
+            var result = await _client.PutAsJson(_httpContextAccessor.HttpContext, $"/api/v1/Products/Price", setProductModel);
             return result;
         }
 
