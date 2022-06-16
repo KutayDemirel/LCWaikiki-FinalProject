@@ -24,6 +24,12 @@ namespace MiniCommerce.UI.Services.Product
             var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Product");
             return result;
         }
+        
+        public async Task<ServiceResponse<IReadOnlyList<ProductModel>>> GetProductsByUserId()
+        {
+            var result = await _client.ReadContentAs<ServiceResponse<IReadOnlyList<ProductModel>>>(_httpContextAccessor.HttpContext, $"/api/v1/Product/User");
+            return result;
+        }
 
         public async Task<ServiceResponse<ProductModel>> GetByIdAsync(int id)
         {

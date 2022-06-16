@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using MiniCommerce.Application.Models;
-using MiniCommerce.Application.Models.Products;
 using MiniCommerce.Application.Services.ProductService;
 using MiniCommerce.Domain.Entities.Common;
 using MiniCommerce.Domain.Enum;

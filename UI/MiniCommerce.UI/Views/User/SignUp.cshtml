@@ -2,7 +2,7 @@
 @{
 	ViewData["Title"] = "SignIn";
 }
-<h1>Sign Up</h1>
+<h1>Kayıt Ol</h1>
 
 @model SignUpModel
 
@@ -12,7 +12,7 @@
 	<div class="card col-md-6">
 		<div class="card-body login-card-body">
 			<p class="login-box-msg">
-				<div asp-validation-summary="All"></div>
+				<div asp-validation-summary="All" class="text-danger"></div>
 			</p>
 			<form asp-action="SignUp" asp-controller="User" id="myForm">
 				<div class="input-group mb-3">
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="input-group mb-3">
-					<input asp-for="FirstName" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.FirstName)" />
+					<input asp-for="FirstName" class="form-control" placeholder="İsim" />
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-user"></span>
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<div class="input-group mb-3">
-					<input asp-for="LastName" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.LastName)" />
+					<input asp-for="LastName" class="form-control" placeholder="Soyad" />
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-user"></span>
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 				<div class="input-group mb-3">
-					<input asp-for="Address" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Address)" />
+					<input asp-for="Address" class="form-control" placeholder="Adres" />
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-user"></span>
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 				<div class="input-group mb-3">
-					<input asp-for="Password" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Password)" />
+					<input asp-for="Password" class="form-control" placeholder="Şifre" />
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-lock"></span>

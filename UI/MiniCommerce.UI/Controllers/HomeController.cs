@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MiniCommerce.UI.Extentions;
+using MiniCommerce.UI.Filter;
 using MiniCommerce.UI.Models;
 using MiniCommerce.UI.Services;
 using MiniCommerce.UI.Services.Category;
@@ -30,33 +31,40 @@ namespace MiniCommerce.UI.Controllers
             _categoryService = categoryService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            var products = await _productService.GetAllProducts();
+            
             var categories = await _categoryService.GetAllCategories();
 
-
-            var productViewModel = new ProductViewModel()
+            if (id is not null)
             {
-                Products = products.Data,
-                Categories = categories.Data,
-            };
-            return View(productViewModel);
+                var categoryProducts = await _productService.GetProductsByCategory(id.Value);
+                var productViewModel = new ProductViewModel()
+                {
+                    Products = categoryProducts.Data,
+                    Categories = categories.Data,
+                };
+                return View(productViewModel);
+            }
+            else
+            {
+                var products = await _productService.GetAllProducts();
+                var productViewModel = new ProductViewModel()
+                {
+                    Products = products.Data,
+                    Categories = categories.Data,
+                };
+                return View(productViewModel);
+            }
         }
     
-        public IActionResult About()
+        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error(int statusCode)
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
+            if (statusCode == 403)
+            {
+                return RedirectToAction("SingIn","User");
+            }
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }

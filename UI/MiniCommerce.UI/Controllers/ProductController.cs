@@ -16,9 +16,11 @@ using MiniCommerce.UI.Services.Color;
 using MiniCommerce.UI.Services.Usage;
 using MiniCommerce.UI.Services.Brand;
 using System.Collections.Generic;
+using MiniCommerce.UI.Filter;
 
 namespace MiniCommerce.UI.Controllers
 {
+    [AuthorizeFilter]
     public class ProductController : Controller
     {
 
@@ -48,17 +50,9 @@ namespace MiniCommerce.UI.Controllers
             return View();
         }
 
-        public async Task<IActionResult> List()
-        {
-            var products = await _productService.GetAllProducts();
 
-
-            var productViewModel = new ProductViewModel()
-            {
-                Products = products.Data,
-            };
-            return View(productViewModel);
-        }
+        #region Details
+        [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
 
@@ -67,6 +61,10 @@ namespace MiniCommerce.UI.Controllers
 
         }
 
+        #endregion
+
+        #region GetProducts by Category
+        [HttpGet]
         public async Task<IActionResult> Category(int? id)
         {
 
@@ -94,6 +92,9 @@ namespace MiniCommerce.UI.Controllers
             }
         }
 
+        #endregion
+
+        #region BuyProduct
 
         [HttpGet]
         public async Task<IActionResult> BuyProduct(int? id)
@@ -101,7 +102,7 @@ namespace MiniCommerce.UI.Controllers
 
             if (id == null)
                 return RedirectToAction().ShowMessage(Status.Error, "Uyarı", "Talep hatalı lütfen menüleri kullanarak yeniden deneyiniz!");
-            
+
             var product = await _productService.GetByIdAsync(id.Value);
             //_mapper.Map<ProductModel>(product.Data))
             return View(product.Data);
@@ -123,7 +124,8 @@ namespace MiniCommerce.UI.Controllers
 
             if (result.ResultType == ResultTypeEnum.Success)
             {
-                return RedirectToAction("Index").ShowMessage(Status.Ok, "Başarılı", result.Message);
+                TempData["AlertMessage"] = "Ürün Satın Alındı";
+                return RedirectToAction("Category", "Product").ShowMessage(Status.Ok, "Başarılı", result.Message);
             }
             else
             {
@@ -131,10 +133,9 @@ namespace MiniCommerce.UI.Controllers
             }
         }
 
+        #endregion
 
-
-        #region offerbuy
-
+        #region OfferBuy
 
 
         [HttpGet]
@@ -152,28 +153,28 @@ namespace MiniCommerce.UI.Controllers
 
         }
 
-        [HttpPost]
-        public async Task<IActionResult> OfferBuyProduct(ProductModel offerBuyProductModel)
-        {
-            if (offerBuyProductModel == null)
-                return RedirectToAction("Index").ShowMessage(Status.Error, "Uyarı", "Güncellenmek istenen blok bulunamadı!");
+        //[HttpPost]
+        //public async Task<IActionResult> OfferBuyProduct(ProductModel offerBuyProductModel)
+        //{
+        //    if (offerBuyProductModel == null)
+        //        return RedirectToAction("Index").ShowMessage(Status.Error, "Uyarı", "Güncellenmek istenen blok bulunamadı!");
 
-            if (!ModelState.IsValid)
-            {
-                return View(offerBuyProductModel).ShowMessage(Status.Error, "Error", "Eksik veya hatalı bilgiler mevcut!");
-            }
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(offerBuyProductModel).ShowMessage(Status.Error, "Error", "Eksik veya hatalı bilgiler mevcut!");
+        //    }
 
-            var result = await _productService.BuyAsync(offerBuyProductModel);
+        //    var result = await _productService.BuyAsync(offerBuyProductModel);
 
-            if (result.ResultType == ResultTypeEnum.Success)
-            {
-                return RedirectToAction("Index").ShowMessage(Status.Ok, "Başarılı", result.Message);
-            }
-            else
-            {
-                return RedirectToAction("Index").ShowMessage(Status.Error, "Hata", "Beklenmedik bir hata oluştu!");
-            }
-        }
+        //    if (result.ResultType == ResultTypeEnum.Success)
+        //    {
+        //        return RedirectToAction("Index").ShowMessage(Status.Ok, "Başarılı", result.Message);
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Index").ShowMessage(Status.Error, "Hata", "Beklenmedik bir hata oluştu!");
+        //    }
+        //}
 
 
         #endregion
@@ -208,7 +209,8 @@ namespace MiniCommerce.UI.Controllers
             var result = await _productService.AddAsync(addProductModel);
             if (result.ResultType == ResultTypeEnum.Success)
             {
-                return RedirectToAction("Index").ShowMessage(Status.Ok, "Başarılı", result.Message);
+                TempData["AlertMessage"] = "Ürün Eklendi";
+                return RedirectToAction("Category","Product").ShowMessage(Status.Ok, "Başarılı", result.Message);
             }
             else
             {
@@ -272,8 +274,8 @@ namespace MiniCommerce.UI.Controllers
             ViewBag.Usages = new SelectList(usages.Data, "Id", "Name");
             ViewBag.IsOfferable = new List<SelectListItem>()
                 {
-                new SelectListItem() { Text = "Yes", Value = "True" },
-                new SelectListItem() { Text = "No", Value = "False"}
+                new SelectListItem() { Text = "Evet", Value = "True" },
+                new SelectListItem() { Text = "Hayır", Value = "False"}
                 };
 
             #region dictionary BackUp

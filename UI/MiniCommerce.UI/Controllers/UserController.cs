@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MiniCommerce.UI.Extentions;
+using MiniCommerce.UI.Filter;
 using MiniCommerce.UI.Models;
 using MiniCommerce.UI.Services;
 using Newtonsoft.Json;
@@ -23,14 +24,13 @@ namespace MiniCommerce.UI.Controllers
 
         #region SignIn
 
-
         [HttpGet]
         public IActionResult SignIn()
         {
             if (HttpContext.HasCookie("Authorization"))
             {
                 //Kullanıcı daha önce giriş yapmış ise yapılacak işlemler
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Category", "Product");
             }
 
             return View();
@@ -57,7 +57,7 @@ namespace MiniCommerce.UI.Controllers
                     var myCookie = JsonConvert.DeserializeObject<ServiceResponse<LoginModel>>(result);
                     HttpContext.SetCookie("Authorization", result, TimeSpan.FromDays(1));
                     TempData["UserName"] = myCookie.Data.FirstName + " " + myCookie.Data.LastName;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Category", "Product");
 
                 }
                 catch (JsonException)
@@ -74,12 +74,13 @@ namespace MiniCommerce.UI.Controllers
             }
 
         #endregion
+
+        #region SignUp
+
         [HttpGet]
         public IActionResult SignUp()
         {
-
             return View();
-
 
         }
 
@@ -102,9 +103,13 @@ namespace MiniCommerce.UI.Controllers
             //    //return RedirectToAction("Index", "Home");
             //}
 
+
+            TempData["AlertMessage"] = "Kayıt Yapıldı";
             return RedirectToAction("SignIn");
 
         }
+
+        #endregion
 
         #region LogOut
 
@@ -117,7 +122,6 @@ namespace MiniCommerce.UI.Controllers
 
 
         #endregion
-
 
         public IActionResult Privacy()
         {

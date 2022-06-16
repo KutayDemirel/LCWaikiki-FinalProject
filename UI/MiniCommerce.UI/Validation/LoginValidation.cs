@@ -7,10 +7,10 @@ namespace MiniCommerce.UI.Validation
     {
         public LoginValidation()
         {
-            RuleFor(p => p.Email).MaximumLength(40).WithMessage("Email alani en fazla 40 karakter olmalidir.");
-            RuleFor(p => p.Email).NotEmpty().WithMessage("Email alani boş olamaz");
-            RuleFor(p => p.Email).EmailAddress().WithMessage("Email alani doğru girilmedi");
-            RuleFor(p => p.Password).NotEmpty().WithMessage("Sifre alanini doldurmaniz gerekiyor");
+            RuleFor(p => p.Email).MaximumLength(40).WithMessage("Email alanı en fazla 40 karakter olmalıdır.");
+            RuleFor(p => p.Email).NotEmpty().WithMessage("Email alanı boş olamaz");
+            RuleFor(p => p.Email).EmailAddress().WithMessage("Email alanı doğru girilmedi");
+            RuleFor(p => p.Password).NotEmpty().WithMessage("Sifre alanını doldurmanız gerekiyor");
         }
 
     }

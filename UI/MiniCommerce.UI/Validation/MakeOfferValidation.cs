@@ -9,7 +9,7 @@ namespace MiniCommerce.UI.Validation
         public MakeOfferValidation()
         {
             RuleFor(x => x.Offer.Price).GreaterThan(0)
-               .WithMessage("Offer must be higher than 0");
+               .WithMessage("Teklif değeri 0'dan fazla olmalıdır");
         }
     }
 }

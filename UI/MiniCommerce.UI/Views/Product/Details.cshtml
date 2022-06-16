@@ -6,79 +6,108 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<div class="card">
-    <div class="col-md-4">
-    <img class="card-img-top" src="~/images/@Model.ImageUrl" alt="" />
-    <div class="card-body">
-        <h5 class="card-title">@Model.Name</h5>
-        <p class="card-text">@Model.Description</p>
-        <p class="card-text">@Model.Brand</p>
-        <p class="card-text">@Model.Color</p>
-        <p class="card-text">@Model.Usage</p>
-        @*<p class="card-text">@Model.Color</p>*@
-        <p class="card-text">@Model.Price</p>
-        @if (@Model.IsSold == false)
-        {
-            <form method="get">
-                <button asp-controller="Product" asp-action="*" asp-route-id="@Model.Id" type="submit" class="btn btn-primary">Satın Al</button>
-                <button asp-controller="Product" asp-action="*" asp-route-id="@Model.Id" type="submit" class="btn btn-primary">Teklif Ver</button>
-                @*<a asp-action="Index" class="btn btn-default">Cancel</a>*@
-            </form>
-        }else{
-            <p class="alert-warning">BU ürün satışta değil</p>
-        }
-            <!--    Pop Up Çalışması -->
-            @*<div class="modal fade" id="UyeOl" tabindex="-1" role="dialog" aria-labelledby="">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Üye Ol</h4>
+<h1>Ürün Detayları</h1>
+@*<div class="table-responsive">*@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Resim</th>
+            <th>
+                Ürün
+            </th>
+            <th>
+                Açıklama
+            </th>
+            <th>
+                Marka
+            </th>
+            <th>
+                Renk
+            </th>
+            <th>
+                Kullanım Durumu
+            </th>
+            <th>
+                Fiyat
+            </th>
+            <th>
+                Ne yapmak istersin ?
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src="~/images/@Model.ImageUrl" style="width:250px; height:300px;" />
+            </td>
+            <td>
+                <p >@Model.Name</p>
+            </td>
+            <td>
+                <p>@Model.Description</p>
+            </td>
+            <td>
+                <p>@Model.Brand</p>
+            </td>
+            <td>
+                <p>@Model.Color</p>
+            </td>
+            <td>
+                <p>@Model.Usage</p>
+            </td>
+            <td>
+                <p>@Model.Price.ToString("c")</p>
+            </td>
+            <td>
+                @if (@Model.IsSold == false)
+                {
+                    @*<form method="get">*@
+                    @*<button asp-controller="Product" asp-action="BuyProduct" asp-route-id="@Model.Id" type="submit" class="btn btn-primary">Satın Al</button>*@
+                    <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#popUp">Satın Al</button>
+                    @using (Html.BeginForm("BuyProduct", "Product", Model, FormMethod.Post))
+                    {
+                        <div id="popUp" class="modal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Almak istiyor musun ?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label>Ürün:</label>
+                                            <p><strong>@Model.Name</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Evet</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hayır</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <form method="post" action="/home/uyeol">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label>
-                                        Kullanıcı adınız
-                                        <input type="text" name="kullaniciad" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label>Kullanıcı şifreniz</label>
-                                    <input type="password" name="sifre" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-                                <button type="submit" class="btn btn-primary">Üye Ol</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>*@
-        
-    </div>
-    </div>
-</div>
+                    }
+
+                    <a class="btn btn-primary" style="margin-bottom:10px" asp-action="Make" asp-controller="Offers" asp-route-id="@Model.Id">Teklif Ver</a>
+                    @*<button asp-controller="Offers" asp-action="Make" asp-route-id="@Model.Id" type="submit" class="btn btn-primary">Teklif Ver</button>*@
+                    @*<a asp-action="Index" class="btn btn-default">Cancel</a>*@
+                    @*</form>*@
+                }
+                else
+                {
+                    <p class="alert-warning">Bu ürün satışta değil</p>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+@*</div>*@
 
 
 
 
-@*@if (@Model.IsOfferable)
-    {
-    <table class="table table-bordered">
-    <tr>
-    <th>#</th>
-    <th>İsimleri</th>
-    <th>Sil</th>
-    <th>Düzenle</th>
-    </tr>
-    <tr>
-    <td>@Model.Name</td>
-    <td>@Model.Description</td>
-    <td>@Model.Color</td>
-    </tr>
 
-    </table>
-    }*@
+
+

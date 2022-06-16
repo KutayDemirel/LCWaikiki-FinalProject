@@ -13,6 +13,7 @@ using MiniCommerce.Application.Features.Queries.Offers.GetAllSubmittedOffers;
 using MiniCommerce.Application.Features.Queries.Products.GetProductById;
 using MiniCommerce.Application.Features.Queries.Products.GetProductList;
 using MiniCommerce.Application.Features.Queries.Products.GetProductsByCategoryId;
+using MiniCommerce.Application.Features.Queries.Products.GetProductsByUserId;
 using MiniCommerce.Application.Features.Queries.Usages.GetUsages;
 using MiniCommerce.Application.Models.Users;
 using MiniCommerce.Domain.Entities;
@@ -38,27 +39,13 @@ namespace MiniCommerce.Application.Mapping
             CreateMap<SetProductOfferCommand, Product>().ReverseMap();
             CreateMap<Product, GetAllProductsQueryResponse>();
             CreateMap<Product, GetProductsByCategoryIdQueryResponse>();
+            CreateMap<Product, GetProductsByUserQueryResponse>();
             CreateMap<Product, GetProductByIdQueryResponse>()
                 .ForMember(dest => dest.Color, opt => opt.MapFrom(src => src.Color.Name))
                 .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category.Name))
                 .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.Brand.Name))
                 .ForMember(dest => dest.Usage, opt => opt.MapFrom(src => src.Usage.Name))
                 .ReverseMap(); ;
-
-
-
-            //CreateMap<Product, ProductsViewModel>()
-            //    .ForMember(dest => dest.Color, opt => opt.MapFrom(src => src.Color.Name))
-            //    .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category.Name))
-            //    .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.Brand.Name))
-            //    .ForMember(dest => dest.Usage, opt => opt.MapFrom(src => src.Usage.Name)).ReverseMap();
-            //CreateMap<Product, ProductDetailViewModel>()
-            //    .ForMember(dest => dest.Color,opt => opt.MapFrom(src => src.Color.Name))
-            //    .ForMember(dest => dest.Category,opt => opt.MapFrom(src => src.Category.Name))
-            //    .ForMember(dest => dest.Brand,opt => opt.MapFrom(src => src.Brand.Name))
-            //    .ForMember(dest => dest.Usage,opt => opt.MapFrom(src => src.Usage.Name))
-            //    .ReverseMap();
-
 
             #endregion
             
@@ -68,21 +55,12 @@ namespace MiniCommerce.Application.Mapping
             CreateMap<ApproveOfferCommand, Offer>().ReverseMap();
             CreateMap<Offer, GetAllReceivedOffersQueryResponse>().ReverseMap();
             CreateMap<Offer, GetAllSubmittedOffersQueryResponse>().ReverseMap();
-            ////CreateMap<AddOfferCommand, Offer>().ReverseMap();
-            //CreateMap<UpdateOfferViewModel, Offer>().ReverseMap();
-            //CreateMap<CreateOfferViewModel, Offer>().ReverseMap();
-            //CreateMap<Offer, OfferDetailViewModel>().ReverseMap();
 
             #endregion
 
             #region Category
 
             CreateMap<Category, GetAllCategoriesQueryResponse>().ReverseMap();
-            //CreateMap<Category, CategoriesViewModel>().ReverseMap();
-            ////CreateMap<AddCategoryCommand, Category>().ReverseMap();
-            //CreateMap<UpdateCategoryViewModel, Category>().ReverseMap();
-            //CreateMap<CreateCategoryViewModel, Category>().ReverseMap();
-            //CreateMap<Category, CategoryDetailViewModel>().ReverseMap();
 
             #endregion
 

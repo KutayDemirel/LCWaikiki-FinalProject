@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "AddProduct";
+    var message = ViewBag.Confirm;
 }
 
 
@@ -9,10 +10,10 @@
 @section Scripts{
 
 <script>
-    $(".select-add-placeholder").prepend("<option value=''>None</option>");
+    $(".select-add-placeholder").prepend("<option value=''>Hiç biri</option>");
 </script>
 <script>
-    $(".select-add-place").prepend("<option value='' >None</option>");
+    $(".select-add-place").prepend("<option value='' >Hiç biri</option>");
 </script>
 
 <script type="text/javascript">
@@ -25,10 +26,12 @@
 <script>
     document.getElementById('select_status').value="<?php echo set_value('status'); ?>";
 </script>
+
+
 }
 
-
-<h1>Add Your Product</h1>
+@section Header{}
+<h1>Ürün Ekle</h1>
 <hr>
 <div class="col-md-9">
     <div class="login-box">
@@ -44,7 +47,7 @@
                 <form enctype="multipart/form-data" asp-action="AddProduct" asp-controller="Product" id="myForm">
                     @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
                     <div class="input-group mb-3">
-                        <input asp-for="Name" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Name)" />
+                        <input asp-for="Name" class="form-control" placeholder="İsim" />
                         @*@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })*@
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -55,39 +58,39 @@
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="CategoryId">Categories</label>
+                        <label asp-for="CategoryId">Kategori</label>
                         <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control">
-                            <option value="-1" disabled selected>Please choose..</option>
+                            <option value="-1" disabled selected>Lütfen seçiniz..</option>
                         </select>
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="BrandId">Brands</label>
+                        <label asp-for="BrandId">Marka</label>
                         <select asp-for="BrandId" asp-items="ViewBag.Brands" class="form-control select-add-place">
-                            <option value="-1" disabled selected>Please choose..</option>
+                            <option value="-1" disabled selected>Lütfen seçiniz..</option>
                         </select>
                         <span asp-validation-for="BrandId" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="ColorId">Colors</label>
+                        <label asp-for="ColorId">Renk</label>
                         <select asp-for="ColorId" asp-items="ViewBag.Colors" class="form-control select-add-placeholder">
-                            <option value="-1" disabled selected>Please choose..</option>
+                            <option value="-1" disabled selected>Lütfen seçiniz..</option>
                         </select>
                         <span asp-validation-for="ColorId" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="UsageId">Usage Status</label>
+                        <label asp-for="UsageId">Kullanım Durumu</label>
                         <select asp-for="UsageId" asp-items="ViewBag.Usages" class="form-control">
-                            <option value="-1" disabled selected>Please choose..</option>
+                            <option value="-1" disabled selected>Lütfen seçiniz..</option>
                         </select>
                         <span asp-validation-for="UsageId" class="text-danger"></span>
                     </div>
 
                     <div class="input-group mb-3">
-                        <input asp-for="Description" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Description)" />
+                        <input asp-for="Description" class="form-control" placeholder="Açıklama" />
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -101,7 +104,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="input-group mb-3">
-                                <input asp-for="Stock" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Stock)" />
+                                <input asp-for="Stock" class="form-control" placeholder="Stok" />
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-lock"></span>
@@ -112,7 +115,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="input-group mb-3">
-                                <input asp-for="Price" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Price)" />
+                                <input asp-for="Price" class="form-control" placeholder="Fiyat" />
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-lock"></span>
@@ -125,16 +128,16 @@
 
 
                     <div class="form-group">
-                        <label asp-for="IsOfferable">Do you want your product to be offerable?</label>
+                        <label asp-for="IsOfferable">Ürünün teklif verilebilir olsun mu ?</label>
                         <select asp-for="IsOfferable" asp-items="ViewBag.IsOfferable" class="form-control">
-                            <option value="-1" disabled selected>Please Choose..</option>
+                            <option value="-1" disabled selected>Lütfen seçiniz..</option>
                         </select>
                         <span asp-validation-for="IsOfferable" class="text-danger"></span>
                     </div>
 
 
                     <div class="form-group mb-3">
-                        <label asp-for="Image" class="control-label"></label>
+                        <label asp-for="Image" class="control-label">Resim</label>
                         <div class="custom-file">
                             <input asp-for="Image" class="custom-file-input" id="Image"
                                    onchange="document.getElementById('ImagePrv').src = window.URL
@@ -170,5 +173,6 @@
         </div>
     </div>
 </div>
+
 
 

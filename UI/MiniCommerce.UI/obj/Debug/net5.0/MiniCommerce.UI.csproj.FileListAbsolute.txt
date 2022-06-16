@@ -159,12 +159,10 @@ C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\CategoryTest\AddCategory.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\CategoryTest\Index.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\AddProduct.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\Details.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
-C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Product\List.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Shared\Components\Categories\Default.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Shared\_categories.cshtml.g.cs
 C:\Users\ktyde\Desktop\LCW Projeler\MiniCommerce\MiniCommerce\UI\MiniCommerce.UI\obj\Debug\net5.0\Razor\Views\Shared\_ClientSideMessagePartial.cshtml.g.cs

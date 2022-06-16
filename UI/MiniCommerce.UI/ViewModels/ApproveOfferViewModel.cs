@@ -5,7 +5,7 @@ namespace MiniCommerce.UI.ViewModels
 {
     public class ApproveOfferViewModel
     {
-        public ProductModel Product { get; set; }
+        public IReadOnlyList<ProductModel> Products { get; set; }
         public ApproveOfferModel Offer { get; set; }
         public IEnumerable<GetOffersModel> GetOffers { get; set; }
     }

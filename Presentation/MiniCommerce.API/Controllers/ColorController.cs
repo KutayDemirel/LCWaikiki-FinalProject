@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MiniCommerce.API.Controllers
 {
+    [Authorize]
     [Route("api/v1/[controller]")]
     [ApiController]
     public class ColorController : ControllerBase
@@ -19,7 +20,6 @@ namespace MiniCommerce.API.Controllers
             _mediator = mediator;
         }
 
-        //[Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

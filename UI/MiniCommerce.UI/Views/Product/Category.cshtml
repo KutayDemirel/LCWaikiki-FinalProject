@@ -28,7 +28,13 @@
 }
 
 
+@if(TempData["AlertMessage"] != null){
+    <div class="alert alert-success">
+        <strong> Başarılı!</strong> @TempData["AlertMessage"]
 
+    </div>
+
+}
 
 @if (products.Count == 0)
 {

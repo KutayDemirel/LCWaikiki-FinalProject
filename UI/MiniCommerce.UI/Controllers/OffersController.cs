@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MiniCommerce.UI.Enums;
 using MiniCommerce.UI.Extentions;
+using MiniCommerce.UI.Filter;
 using MiniCommerce.UI.Models;
 using MiniCommerce.UI.Services.Offer;
 using MiniCommerce.UI.Services.Product;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace MiniCommerce.UI.Controllers
 {
+    [AuthorizeFilter]
     public class OffersController : Controller
     {
         private readonly IOfferService _offerService;
@@ -69,7 +71,8 @@ namespace MiniCommerce.UI.Controllers
 
             if (result.ResultType == ResultTypeEnum.Success)
             {
-                return RedirectToAction("Index","Product").ShowMessage(Status.Ok, "Başarılı", result.Message);
+                TempData["AlertMessage"] = "Teklif Yapıldı";
+                return RedirectToAction("Make").ShowMessage(Status.Ok, "Başarılı", result.Message);
             }
             else
             {
@@ -104,11 +107,12 @@ namespace MiniCommerce.UI.Controllers
 
             if (result.ResultType == ResultTypeEnum.Success)
             {
-                return RedirectToAction("Index", "Product").ShowMessage(Status.Ok, "Başarılı", result.Message);
+                TempData["AlertMessage"] = "Teklif Onaylandı";
+                return RedirectToAction("Index", "Accounts").ShowMessage(Status.Ok, "Başarılı", result.Message);
             }
             else
             {
-                return RedirectToAction("Index", "Product").ShowMessage(Status.Error, "Hata", "Beklenmedik bir hata oluştu!");
+                return RedirectToAction("Index", "Accounts").ShowMessage(Status.Error, "Hata", "Beklenmedik bir hata oluştu!");
             }
 
         }
@@ -117,10 +121,7 @@ namespace MiniCommerce.UI.Controllers
         #endregion
 
 
-
-
-
-        #region Delete Offer
+        #region Withdraw Offer
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
@@ -140,7 +141,8 @@ namespace MiniCommerce.UI.Controllers
             switch (result.ResultType)
             {
                 case ResultTypeEnum.Success:
-                    return RedirectToAction("ReceivedOffers","Accounts");
+                    TempData["SecondAlertMessage"] = "Teklif geri çekildi";
+                    return RedirectToAction("Index","Accounts");
                     
                 case ResultTypeEnum.Error:
                     return Json(new JResult

@@ -8,10 +8,10 @@ namespace MiniCommerce.UI.Validation
         public ImageValidator()
         {
             RuleFor(x => x.Length).LessThanOrEqualTo(400000)
-                .WithMessage("File size is larger than allowed");
+                .WithMessage("Dosya 400kb'dan fazla");
 
             RuleFor(x => x.FileName).NotNull().Must(x => x.Contains("jpeg") || x.Contains("jpg") || x.Equals("image/png"))
-                .WithMessage("File type is larger than allowed");
+                .WithMessage("Dosya türü hatalı");
 
         }
     }

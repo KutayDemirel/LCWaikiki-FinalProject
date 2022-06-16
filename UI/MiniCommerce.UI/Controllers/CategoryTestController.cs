@@ -11,6 +11,8 @@ namespace MiniCommerce.UI.Controllers
     public class CategoryTestController : Controller
     {
 
+        #region Test
+
         public async Task<IActionResult> Index()
         {
             var httpClient = new HttpClient();
@@ -29,15 +31,19 @@ namespace MiniCommerce.UI.Controllers
         {
             var httpClient = new HttpClient();
             var jsonCategory = JsonConvert.SerializeObject(p);
-            StringContent content = new StringContent(jsonCategory,Encoding.UTF8,"application/json");
-            var responseMessage = await httpClient.PostAsync("https://localhost:44381/api/v1/Category",content);
+            StringContent content = new StringContent(jsonCategory, Encoding.UTF8, "application/json");
+            var responseMessage = await httpClient.PostAsync("https://localhost:44381/api/v1/Category", content);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
             return View(p);
         }
+
+        #endregion
     }
+
+    #region Test Model
 
     public class Class1
     {
@@ -45,4 +51,6 @@ namespace MiniCommerce.UI.Controllers
         public string Name { get; set; }
         public string Description { get; set; }
     }
+
+    #endregion
 }

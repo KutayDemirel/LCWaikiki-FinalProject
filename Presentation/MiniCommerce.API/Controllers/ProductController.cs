@@ -9,8 +9,8 @@ using MiniCommerce.Application.Features.Commands.Products.Updates.SetProductOffe
 using MiniCommerce.Application.Features.Queries.Products.GetProductById;
 using MiniCommerce.Application.Features.Queries.Products.GetProductList;
 using MiniCommerce.Application.Features.Queries.Products.GetProductsByCategoryId;
+using MiniCommerce.Application.Features.Queries.Products.GetProductsByUserId;
 using MiniCommerce.Application.Models;
-using MiniCommerce.Application.Models.Products;
 using MiniCommerce.Application.Services.ProductService;
 using MiniCommerce.Domain.Entities;
 using MiniCommerce.Domain.Enum;
@@ -38,7 +38,6 @@ namespace MiniCommerce.API.Controllers
             _mapper = mapper;
             _userManager = userManager;
         }
-        //[Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -46,18 +45,8 @@ namespace MiniCommerce.API.Controllers
             return Ok(response);
         }
 
-        #region  NonMediatr get all
+    
 
-        //[HttpGet]
-        //public ActionResult<IEnumerable<ProductsViewModel>> GetAll()
-        //{
-        //    var productList = _productService.GetAll(false);
-        //    List<ProductsViewModel> vm = _mapper.Map<List<ProductsViewModel>>(productList);
-        //    return vm;
-        //}
-        #endregion
-
-        //[Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<ServiceResponse<GetProductByIdQueryResponse>>> GetById(int id)
         {
@@ -65,34 +54,24 @@ namespace MiniCommerce.API.Controllers
             var response = await _mediator.Send(new GetProductByIdQuery() { Id = id });
             return Ok(response);
 
-            //var product = await _productService.GetByIdAsync(id, false);
-
-            //if (product == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //ProductDetailViewModel result = _mapper.Map<ProductDetailViewModel>(product);
-            //var response = new ServiceResponse<ProductDetailViewModel>(ResultTypeEnum.Success, "", result);
         }
 
         [HttpGet("Search")]
         public async Task<ActionResult<ServiceResponse<GetProductsByCategoryIdQueryResponse>>> GetProductsByCategoryId([FromQuery] int categoryId)
         {
 
-
             var response = await _mediator.Send(new GetProductsByCategoryIdQuery() { Id = categoryId });
             return Ok(response);
 
-            //var product = _productService.GetWhere(products => products.CategoryId == categoryId, false);
+        }
+        
+        [HttpGet("User")]
+        public async Task<ActionResult<ServiceResponse<GetProductsByUserQueryResponse>>> GetProductsByUserId()
+        {
+            var userId = _userManager.Users.FirstOrDefault(x => x.Email == HttpContext.User.Identity.Name).Id;
+            var response = await _mediator.Send(new GetProductsByUserQuery() { Id = userId });
+            return Ok(response);
 
-            //if (product == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //List<ProductsViewModel> result = _mapper.Map<List<ProductsViewModel>>(product);
-            //var response = new ServiceResponse<List<ProductsViewModel>>(ResultTypeEnum.Success, "", result);
         }
 
         [Authorize]
@@ -115,39 +94,20 @@ namespace MiniCommerce.API.Controllers
         public async Task<IActionResult> UpdatePrice(SetProductOfferCommand setProductOfferCommand)
         {
 
-
             var result = await _mediator.Send(setProductOfferCommand);
             return Ok(result);
 
         }
 
-        [Authorize]
         [HttpPut]
         public async Task<IActionResult> Update(BuyProductCommand buyProductModel)
         {
 
-
             var result = await _mediator.Send(buyProductModel);
             return Ok(result);
-
-            //if (ModelState.IsValid)
-            //{
-            //    var product = await _productService.GetByIdAsync(buyProductModel.Id);
-
-            //    if (product == null)
-            //    {
-            //        return NotFound();
-            //    }
-            //    _mapper.Map(buyProductModel, product);
-            //    _productService.Update(product);
-            //    await _productService.SaveAsync();
-
-            //    return Ok();
-            //}
-            //return BadRequest();
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
@@ -156,7 +116,16 @@ namespace MiniCommerce.API.Controllers
             return Ok();
         }
 
+        #region  NonMediatr get all
 
+        //[HttpGet]
+        //public ActionResult<IEnumerable<ProductsViewModel>> GetAll()
+        //{
+        //    var productList = _productService.GetAll(false);
+        //    List<ProductsViewModel> vm = _mapper.Map<List<ProductsViewModel>>(productList);
+        //    return vm;
+        //}
+        #endregion
 
         #region Add Without Mediatr
         //[HttpPost]
@@ -175,7 +144,6 @@ namespace MiniCommerce.API.Controllers
         //}
         #endregion
 
-
         #region Add Mediatr 1
         //[HttpPost]
         //public async Task<IActionResult> Add(AddProductCommand request)
@@ -188,7 +156,6 @@ namespace MiniCommerce.API.Controllers
         //    return BadRequest();
         //}
         #endregion
-
 
         #region NoContent
 

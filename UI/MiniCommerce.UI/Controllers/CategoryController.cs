@@ -20,6 +20,8 @@ namespace MiniCommerce.UI.Controllers
             _categoryService = categoryService;
         }
 
+        #region Test List
+        [HttpGet]
         public async Task<IActionResult> List()
         {
             var categories = await _categoryService.GetAllCategories();
@@ -31,5 +33,7 @@ namespace MiniCommerce.UI.Controllers
 
             return Ok(productViewModel);
         }
+
+        #endregion
     }
 }

@@ -1,12 +1,13 @@
-﻿@model ApproveOfferViewModel
+﻿@using System.Linq
+@model ApproveOfferViewModel
 
 
 @section Header{}
 @section Categories{
 
 <div class="list-group">
-    <a href="~/Accounts/SubmittedOffers" class="list-group-item list-group-item-action">Your Offers</a>
-    <a href="~/Accounts/ReceivedOffers" class="list-group-item list-group-item-action">Received Offers</a>
+    <a href="~/Accounts/SubmittedOffers" class="list-group-item list-group-item-action">Yaptığın Teklifler</a>
+    <a href="~/Accounts/ReceivedOffers" class="list-group-item list-group-item-action">Alınan Teklifler</a>
 </div>
 }
 
@@ -15,13 +16,13 @@
     <thead>
         <tr>
             <th>
-                Product
+                Ürün
             </th>
             <th>
-                Price
+                Fiyat
             </th>
             <th>
-                Status
+                Ne Yapmak İstersin ?
             </th>
         </tr>
     </thead>
@@ -30,7 +31,7 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ProductId)
+                @Html.DisplayFor(modelItem => Model.Products.FirstOrDefault(x => x.Id == item.ProductId).Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
@@ -45,7 +46,7 @@
                            @* <input type="hidden" name="Product.Id" value="@item.ProductId"/>
                             <input type="hidden" name="Product.Price" value="@item.Price"/>*@
                             <input type="hidden" name="Offer.Id" value="@item.Id"/>
-                        <input type="submit" value="Approve" asp-controller="Offers" asp-action="Approve"  class="btn btn-sm btn-outline-success ">
+                        <input type="submit" value="Onayla" asp-controller="Offers" asp-action="Approve"  class="btn btn-sm btn-outline-success ">
                         }
 
                     </div>
@@ -53,13 +54,13 @@
 
                         @using (Html.BeginForm("Delete", "Offers",item, FormMethod.Post))
                         {
-                        <input type="submit" value="Refuse" asp-controller="Offers" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
+                        <input type="submit" value="Reddet" asp-controller="Offers" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
                         }
                     </div>
                 </div>
 
                 }else{
-                <p>Product has been approved</p>
+                <p class="alert-success">Ürün fiyatı onaylandı</p>
                 }
             </td>
         </tr>

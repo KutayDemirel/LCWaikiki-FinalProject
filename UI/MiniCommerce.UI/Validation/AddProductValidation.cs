@@ -7,12 +7,12 @@ namespace MiniCommerce.UI.Validation
     {
         public AddProductValidation()
         {
-            RuleFor(p => p.Price).NotNull().WithMessage("You must enter a price.")
-                .NotEmpty().WithMessage("You must enter a price.")
-                .GreaterThan(0).WithMessage("Price must be higher than 0.");
+            RuleFor(p => p.Price).NotNull().WithMessage("Fiyat girmelisin.")
+                .NotEmpty().WithMessage("Fiyat girmelisin.")
+                .GreaterThan(0).WithMessage("Fiyat 0'dan büyük olmalıdır.");
 
 
-            RuleFor(p => p.Image).NotNull().WithMessage("Image must be asdasd.").NotEmpty().WithMessage("Image must be katık.");
+            RuleFor(p => p.Image).NotNull().WithMessage("Resim Eklemelisin.").NotEmpty().WithMessage("Resim Eklemelisin.");
             //RuleFor(p => p.Image).NotEmpty().WithMessage("Image must be uploaded.").SetValidator(new FileValidator());
 
 
@@ -27,18 +27,18 @@ namespace MiniCommerce.UI.Validation
 
 
 
-            RuleFor(p => p.Stock).NotNull().NotEmpty().WithMessage("You must enter a stock status.")
-                .GreaterThan(0).WithMessage("Stock status must be higher than 0");
-            RuleFor(p => p.UsageId).NotEmpty().WithMessage("Usage Status must be selected.")
-                .NotNull().WithMessage("Usage Status must be selected.");
-            RuleFor(p => p.CategoryId).NotEmpty().WithMessage("Category Name must be selected.")
-                .NotNull().WithMessage("Category Name must be selected.");
-            RuleFor(p => p.Name).NotNull().WithMessage("You must enter a name.")
-                .NotEmpty().WithMessage("You must enter a name.")
-                .MaximumLength(100).WithMessage("You can not type more than 100 character for name.");
-            RuleFor(p => p.Description).NotNull().WithMessage("You must enter a description")
-                .NotEmpty().WithMessage("You must enter a description")
-                .MaximumLength(300).WithMessage("You can not type more than 300 character for description.");
+            RuleFor(p => p.Stock).NotNull().NotEmpty().WithMessage("Stok bilgisi girmelisin.")
+                .GreaterThan(0).WithMessage("Stok bilgisi 0'dan fazla olmalıdır.");
+            RuleFor(p => p.UsageId).NotEmpty().WithMessage("Kullanım durumu seçilmelidir.")
+                .NotNull().WithMessage("Kullanım durumu seçilmelidir.");
+            RuleFor(p => p.CategoryId).NotEmpty().WithMessage("Kategori bilgisi seçilmelidir.")
+                .NotNull().WithMessage("Kategori bilgisi seçilmelidir.");
+            RuleFor(p => p.Name).NotNull().WithMessage("İsim girmelisin.")
+                .NotEmpty().WithMessage("İsim girmelisin.")
+                .MaximumLength(100).WithMessage("100 karakterden fazla isim giremezsin");
+            RuleFor(p => p.Description).NotNull().WithMessage("Açıklama girmelisin")
+                .NotEmpty().WithMessage("Açıklama girmelisin")
+                .MaximumLength(300).WithMessage("300 karakterden fazla açıklama giremezsin.");
         }
 
     }

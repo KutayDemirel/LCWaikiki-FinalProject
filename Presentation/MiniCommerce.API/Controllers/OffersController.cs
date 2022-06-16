@@ -17,7 +17,6 @@ using System.Threading.Tasks;
 
 namespace MiniCommerce.API.Controllers
 {
-    [Authorize]
     [Route("api/v1/[controller]")]
     [ApiController]
     public class OffersController : ControllerBase
@@ -31,7 +30,7 @@ namespace MiniCommerce.API.Controllers
             _userManager = userManager;
         }
 
-
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllReceived()
         {
@@ -41,6 +40,7 @@ namespace MiniCommerce.API.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [HttpGet("Submit")]
         public async Task<IActionResult> GetAllSubmitted()
         {
@@ -78,6 +78,7 @@ namespace MiniCommerce.API.Controllers
         //[HttpDelete]
         //[ProducesResponseType((int)HttpStatusCode.OK)]
         //public async Task<ActionResult<int>> Delete(int id) ===> **Query String**
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<int>> DeleteOffer(int id)
         {

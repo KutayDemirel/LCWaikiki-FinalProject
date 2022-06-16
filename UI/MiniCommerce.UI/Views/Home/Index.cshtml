@@ -39,13 +39,13 @@ else
     <div class="row">
         @foreach (var product in products)
         {
-            @if (product.IsOfferable == true)
-            {
+            @*@if (product.IsOfferable == true)
+            {*@
                 @*<div class="col-md-3">*@
                     <div class="col-md-3 d-flex align-items-stretch">
                     @await Html.PartialAsync("_product",product)
                 </div>
-            }
+            @*}*@
         }
         
     </div>

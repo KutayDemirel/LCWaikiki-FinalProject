@@ -1,10 +1,16 @@
 ﻿@{
     ViewData["Title"] = "SignIn";
 }
-<h1>Sign In</h1>
 
 @model SignInModel
+@if(TempData["AlertMessage"] != null){
+    <div class="alert alert-success">
+        <strong> Başarılı!</strong> @TempData["AlertMessage"]
 
+    </div>
+
+}
+<h1>Giriş Yap</h1>
 <div class="login-box">
 
     <!-- /.login-logo -->
@@ -19,16 +25,16 @@
                     <input asp-for="Email" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Email)" />
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span asp-validation-for="Email"></span>
+                            <span asp-validation-for="Email" class="text-danger"></span>
                             @*<span class="fas fa-user"></span>*@
                         </div>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input asp-for="Password" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Password)" />
+                    <input asp-for="Password" class="form-control" placeholder="Şifre" />
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span asp-validation-for="Password"></span>
+                            <span asp-validation-for="Password" class="text-danger"></span>
                             @*<span class="fas fa-lock"></span>*@
                         </div>
                     </div>

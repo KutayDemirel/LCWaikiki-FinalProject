@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using MiniCommerce.Application.Models;
-using MiniCommerce.Application.Models.Products;
 using System;
 using System.Text.Json.Serialization;
 
@@ -18,6 +17,7 @@ namespace MiniCommerce.Application.Features.Commands.Products.Adds
         public int UsageId { get; set; }
         public int? BrandId { get; set; }
         public string ImageUrl { get; set; }
+        public string Description { get; set; }
         public bool IsOfferable { get; set; }
     
         public DateTime CreatedDate { get; set; }

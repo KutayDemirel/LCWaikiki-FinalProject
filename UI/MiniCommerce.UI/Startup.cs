@@ -82,7 +82,7 @@ namespace MiniCommerce.UI
             //services.AddControllersWithViews();
             //services.AddUIServices(configuration);
 
-               
+
 
             //services.AddFluentValidation(x =>
             //{
@@ -93,19 +93,19 @@ namespace MiniCommerce.UI
 
             services.AddHttpClient<IProductService, ProductService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
-            
+
             services.AddHttpClient<ICategoryService, CategoryService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
 
             services.AddHttpClient<IOfferService, OfferService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
-            
+
             services.AddHttpClient<IBrandService, BrandService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
-            
+
             services.AddHttpClient<IColorService, ColorService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
-            
+
             services.AddHttpClient<IUsageService, UsageService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
 
@@ -136,7 +136,8 @@ namespace MiniCommerce.UI
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),RequestPath = "/modules"
+                    Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+                RequestPath = "/modules"
             }); //node_modules static file
 
             if (env.IsDevelopment())
@@ -167,8 +168,8 @@ namespace MiniCommerce.UI
 
 
                 endpoints.MapControllerRoute(
-                    name : "default",
-                    pattern :"{controller=Home}/{action=Index}/{id?}");
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
 

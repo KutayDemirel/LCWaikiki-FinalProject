@@ -1,8 +1,72 @@
-﻿@section Categories{
+﻿@*@model IReadOnlyList<ProductModel>*@
+@model ProductViewModel
+
+@section Categories{
 
 
 <div class="list-group">
-    <a href="~/Accounts/SubmittedOffers" class="list-group-item list-group-item-action">Your Offers</a>
-    <a href="~/Accounts/ReceivedOffers" class="list-group-item list-group-item-action">Received Offers</a>
+    <a href="~/Accounts/SubmittedOffers" class="list-group-item list-group-item-action">Yaptığın Teklifler</a>
+    <a href="~/Accounts/ReceivedOffers" class="list-group-item list-group-item-action">Alınan Teklifler</a>
 </div>
+}
+
+@if (TempData["AlertMessage"] != null)
+
+
+{
+    <div class="alert alert-success">
+        <strong> Başarılı!</strong> @TempData["AlertMessage"]
+
+    </div>
+
+}
+@if (TempData["SecondAlertMessage"] != null)
+
+
+{
+    <div class="alert alert-danger">
+        <strong> Başarılı!</strong> @TempData["SecondAlertMessage"]
+
+    </div>
+
+}
+
+<h1>Ürünlerim</h1>
+@if (Model.Products.Count == 0)
+{
+    @await Html.PartialAsync("_noproduct")
+}
+else
+{
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-md-3 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="~/images/@product.ImageUrl" alt="" />
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-title">@product.Description</p>
+                    </div>
+                    <div class="col-lg-12 card-footer" style="text-align:center; margin-bottom:20px;  max-height:120px;">
+                        <a class="btn btn-sm btn-danger" style="margin-bottom:10px;text-align:center;" asp-action="Details" asp-controller="Product" asp-route-id=@product.Id>İncele</a>
+                        <div class="btn-toolbar mb-3" role="toolbar">
+                            <div class="btn-group mr">
+                                @if (product.IsOfferable is false)
+                                {
+                                    <p class="alert-danger">Ürün'e teklif verilemez</p>
+                                }
+
+                                @if (product.IsSold is true)
+
+                                {
+                                    <p class="alert-warning">Ürün Satışta değil</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 }
