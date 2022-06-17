@@ -37,10 +37,8 @@ namespace MiniCommerce.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddRazorPages();
-            //services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddHttpClient<IAuthService, AuthService>(c =>
-            //   c.BaseAddress = new Uri(Configuration["HttClientUrl:MiniCommerceApi"]));
+
+            #region Cookie Set Try
 
             //services.ConfigureApplicationCookie(options =>
             //{
@@ -56,40 +54,10 @@ namespace MiniCommerce.UI
             //    options.SlidingExpiration = true;
             //});
 
-            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
-            //    x.LoginPath = "/Auth/SignIn");
+            #endregion
 
-            //services.AddHttpClient("HttClientUrl:MiniCommerceApi");
-            //services.AddHttpClient("MiniCommerce", c =>
-            //{
-            //    c.BaseAddress = new Uri("HttClientUrl:MiniCommerceApi");
-            //    //c.DefaultRequestHeaders.Add("Accept", "application/json");
-            //});
-
-            //services.AddHttpClient();
-
-
-            //services.AddControllersWithViews();
-
-            //services.AddControllersWithViews().AddFluentValidation(
-            //    a => a.RegisterValidatorsFromAssemblyContaining<AddProductValidation>());
 
             services.AddAutoMapper(typeof(Startup));
-
-            //services.AddHttpContextAccessor();
-            //services.TryAddSingleton<IActionContextAccessor, ActionContextAccessor>();
-
-            //services.AddControllersWithViews();
-            //services.AddUIServices(configuration);
-
-
-
-            //services.AddFluentValidation(x =>
-            //{
-            //    x.DisableDataAnnotationsValidation = true;
-            //    x.RegisterValidatorsFromAssemblyContaining<AddProductValidation>();
-            //});
-
 
             services.AddHttpClient<IProductService, ProductService>(c =>
                            c.BaseAddress = new Uri(Configuration["HttClientUrl:API"]));
@@ -120,9 +88,6 @@ namespace MiniCommerce.UI
                 {
                     opt.RegisterValidatorsFromAssemblyContaining(typeof(Startup));
                 });
-
-
-
 
             services.AddHttpContextAccessor();
 
