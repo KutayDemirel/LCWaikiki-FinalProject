@@ -51,8 +51,8 @@ LC Waikiki ve Patika.dev iş birliği ile yapılan **LC Waikiki .Net Bootcamp** 
   ```
   (Postgresql ile Docker Container şifrelerinin aynı olmasına dikkat edilmeli)
   Başlangıç projemizi **MiniCommerce.API** olarak belirledikten sonra package manager console’umuzda varsayılan projemizi **MiniCommerce.Persistence** olarak belirliyor ve **update-database** komutunu giriyoruz. Bu noktadan sonra Api üzerinde [https://localhost:44381/swagger/index.html] portunda inceleme yapabilirsiniz.MVC projesi bağlantısı için konsol üzerinden 'npm install' ve 'npm start' komutları girilmeli. Son olarak projeyi çalıştırmak için Solution dosyası üzerinden **Multiple Start-Up** projesi seçilerek **MiniCommerce.API** ve **MiniCommerce.UI** aynı anda işaretlenmelidir. Start butonuyla [https://localhost:44359/] portu üzerinden üyelik alabilir ve siteyi keşfedebilirsiniz.  
-  
-    ## :blue_book: Proje Özellikleri 
+   
+   ## :blue_book: Proje Özellikleri 
 *  Onion Architecture 
 *  Mediatr kütüphanesiyle CQRS Pattern kullanımı
 *  JW Token, Bearer şeması kullanımı
